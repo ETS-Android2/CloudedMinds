@@ -22,5 +22,13 @@ public class IntroScreen extends AppCompatActivity {
                 startActivity(new Intent(IntroScreen.this, MainActivity.class));
             }
         });
+
+        Button start = findViewById(R.id.btnStartSession);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(IntroScreen.this, CatchIt.class));
+            }
+        });
     }
 }

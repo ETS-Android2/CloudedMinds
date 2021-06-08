@@ -4,80 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatchIt">
-
-
-    <Button
-        android:id="@+id/btnNextCatchIt"
-        android:layout_width="275dp"
-        android:layout_height="70dp"
-        android:text="NEXT"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:backgroundTint="#C2E1E4"
-        app:icon="@drawable/ic_start"
-        app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDate"
-        app:layout_constraintVertical_bias="0.396" />
+    tools:context=".CatchIt2">
 
     <TextView
-        android:id="@+id/lblDate"
+        android:id="@+id/lblMood2"
         android:layout_width="357dp"
-        android:layout_height="32dp"
-        android:text="What was the date of this event?"
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEvent"
-        app:layout_constraintVertical_bias="0.036" />
-
-    <TextView
-        android:id="@+id/lblEvent"
-        android:layout_width="357dp"
-        android:layout_height="46dp"
-        android:text="What is the event that made you feel strong emotions?"
+        android:layout_height="30dp"
+        android:text="Rate the strength of this mood:"
         android:textColor="#0C4863"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintTop_toBottomOf="@+id/txtMood"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtMood"
+        android:layout_width="357dp"
+        android:layout_height="85dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Enter your mood here."
+        android:inputType="textMultiLine"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMood"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/lblMood"
         android:layout_width="357dp"
         android:layout_height="46dp"
-        android:text="The way we perceive certain situations can affect our feelings and mood."
+        android:text="What mood did you experience during and after this event?"
+        android:textColor="#0C4863"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="357dp"
+        android:layout_height="46dp"
+        android:text="Think about how you felt during this event and in the time afterwards."
         android:textColor="#0C4863"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTitle2"
-        app:layout_constraintVertical_bias="0.014" />
-
-    <TextView
-        android:id="@+id/lblTitle2"
-        android:layout_width="299dp"
-        android:layout_height="46dp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="Catch It"
-        android:textColor="#0A80B6"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.016" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -129,7 +110,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
-
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -210,34 +190,114 @@
             app:layout_constraintVertical_bias="0.015" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/txtEvent"
-        android:layout_width="357dp"
-        android:layout_height="200dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="Enter the event here."
-        android:inputType="textMultiLine"
-        android:textSize="18sp"
+    <TextView
+        android:id="@+id/lblTitle2"
+        android:layout_width="299dp"
+        android:layout_height="46dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Catch It"
+        android:textColor="#0A80B6"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblEvent"
-        app:layout_constraintVertical_bias="0.024" />
-
-    <EditText
-        android:id="@+id/txtDate"
-        android:layout_width="357dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="DD/MM/YYYY"
-        android:inputType="date"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblDate"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnStartSession2"
+        android:layout_width="275dp"
+        android:layout_height="70dp"
+        android:text="NEXT"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:backgroundTint="#C2E1E4"
+        app:icon="@drawable/ic_start"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/rdGroup"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <RadioGroup
+        android:id="@+id/rdGroup"
+        android:layout_width="109dp"
+        android:layout_height="220dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMood2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rb"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="1 (Low)"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblMood2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="2"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="3"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="4"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="5 (High)"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb2"
+            app:layout_constraintVertical_bias="0.331" />
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
