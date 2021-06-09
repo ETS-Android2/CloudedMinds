@@ -8,27 +8,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class CatchIt2 extends AppCompatActivity {
+public class CheckIt extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_catch_it2);
+        setContentView(R.layout.activity_check_it);
 
         ImageView home = findViewById(R.id.btnHome);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CatchIt2.this, MainActivity.class));
+                startActivity(new Intent(CheckIt.this, MainActivity.class));
             }
         });
 
-        Button checkit = findViewById(R.id.btnToCheckIt);
-        checkit.setOnClickListener(new View.OnClickListener() {
+        Button checkit2 = findViewById(R.id.btnToCheckIt2);
+        checkit2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CatchIt2.this, CheckIt.class));
+                startActivity(new Intent(CheckIt.this, CheckIt2.class));
             }
         });
+
     }
 }
