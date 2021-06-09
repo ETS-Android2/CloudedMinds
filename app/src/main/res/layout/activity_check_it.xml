@@ -21,23 +21,9 @@
         app:layout_constraintVertical_bias="0.031" />
 
     <TextView
-        android:id="@+id/textView15"
-        android:layout_width="340dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="320dp"
-        android:text="In this event, have you catastrophised?"
-        android:textColor="#0C4863"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
         android:id="@+id/lblTitle4"
         android:layout_width="340dp"
-        android:layout_height="46dp"
+        android:layout_height="30dp"
         android:fontFamily="@font/baloo"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="Catastrophising"
