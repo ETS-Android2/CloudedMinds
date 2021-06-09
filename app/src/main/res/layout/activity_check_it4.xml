@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CheckIt2">
+    tools:context=".CheckIt4">
 
     <RadioGroup
         android:id="@+id/radioGroup2"
@@ -43,25 +43,23 @@
         android:id="@+id/textView10"
         android:layout_width="340dp"
         android:layout_height="25dp"
-        android:layout_marginBottom="296dp"
         android:justificationMode="inter_word"
-        android:text="In this event, have you over-generalised?"
+        android:text="In this event, have you been self-critical?"
         android:textColor="#0C4863"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/lblTitle4"
         android:layout_width="340dp"
-        android:layout_height="46dp"
+        android:layout_height="30dp"
         android:fontFamily="@font/baloo"
         android:gravity="center|center_horizontal|center_vertical"
-        android:text="Over-Generalising"
+        android:text="Self-Critical"
         android:textColor="#0A80B6"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,16 +71,29 @@
     <TextView
         android:id="@+id/textView13"
         android:layout_width="340dp"
-        android:layout_height="90dp"
+        android:layout_height="66dp"
         android:justificationMode="inter_word"
-        android:text="Sometimes, we generalise one small thing. For example, if one of your daily tasks has not been finished, you may thing, &quot;I've achieved nothing, today has been pointless&quot;."
+        android:text="Often if our mood is low, we blame ourselves for anything that goes wrong, even if things have nothing to do with us in reality."
         android:textColor="#0C4863"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTitle4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="340dp"
+        android:layout_height="80dp"
+        android:justificationMode="inter_word"
+        android:text="For example, you go into a local shop and the assistant who knows you is 'off-hand', your automatic thought is &quot;she doesn't like me...have I done something wrong?&quot; "
+        android:textColor="#0C4863"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -101,7 +112,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnToCheckIt3"
+        android:id="@+id/btnToCheckIt5"
         android:layout_width="275dp"
         android:layout_height="70dp"
         android:text="NEXT"
@@ -112,9 +123,10 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.366" />
+        app:layout_constraintVertical_bias="0.123" />
 
     <TextView
         android:id="@+id/lblTitle3"

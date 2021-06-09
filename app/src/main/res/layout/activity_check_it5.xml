@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CheckIt2">
+    tools:context=".CheckIt5">
 
     <RadioGroup
         android:id="@+id/radioGroup2"
@@ -43,25 +43,23 @@
         android:id="@+id/textView10"
         android:layout_width="340dp"
         android:layout_height="25dp"
-        android:layout_marginBottom="296dp"
         android:justificationMode="inter_word"
-        android:text="In this event, have you over-generalised?"
+        android:text='In this event, have you "mind read"?'
         android:textColor="#0C4863"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.031" />
 
     <TextView
         android:id="@+id/lblTitle4"
         android:layout_width="340dp"
-        android:layout_height="46dp"
+        android:layout_height="30dp"
         android:fontFamily="@font/baloo"
         android:gravity="center|center_horizontal|center_vertical"
-        android:text="Over-Generalising"
+        android:text="Mind Reading"
         android:textColor="#0A80B6"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,16 +71,29 @@
     <TextView
         android:id="@+id/textView13"
         android:layout_width="340dp"
-        android:layout_height="90dp"
+        android:layout_height="60dp"
         android:justificationMode="inter_word"
-        android:text="Sometimes, we generalise one small thing. For example, if one of your daily tasks has not been finished, you may thing, &quot;I've achieved nothing, today has been pointless&quot;."
+        android:text="We sometimes believe we know what others are thinking and if our mood is low, we may expect that they are thinking badly of us."
         android:textColor="#0C4863"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTitle4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="340dp"
+        android:layout_height="80dp"
+        android:justificationMode="inter_word"
+        android:text='For example, if a friend is quiet you may think "that is because she thinks I am boring". Or we may predict a negative outcome before it happens.'
+        android:textColor="#0C4863"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -101,7 +112,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnToCheckIt3"
+        android:id="@+id/btnToChangeIt"
         android:layout_width="275dp"
         android:layout_height="70dp"
         android:text="NEXT"
@@ -112,9 +123,10 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.366" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
         android:id="@+id/lblTitle3"

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudedMinds">
-        <activity android:name=".CheckIt3"></activity>
+        <activity android:name=".CheckIt5"></activity>
+        <activity android:name=".CheckIt4" />
+        <activity android:name=".CheckIt3" />
         <activity android:name=".CheckIt2" />
         <activity android:name=".CheckIt" />
         <activity android:name=".CatchIt2" />
