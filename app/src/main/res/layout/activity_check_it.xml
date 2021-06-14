@@ -13,12 +13,13 @@
         android:justificationMode="inter_word"
         android:text="In this event, have you catastrophised?"
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <TextView
         android:id="@+id/lblTitle4"
@@ -28,21 +29,22 @@
         android:gravity="center|center_horizontal|center_vertical"
         android:text="Catastrophising"
         android:textColor="#0A80B6"
-        android:textSize="22sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.045" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="340dp"
-        android:layout_height="66dp"
+        android:layout_height="90dp"
         android:justificationMode="inter_word"
         android:text="Sometimes, we think things are much worse than they really are by jumping to the worst conclusion. This is called Catastrophising."
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -57,13 +59,13 @@
         android:justificationMode="inter_word"
         android:text="For example, you make a small mistake at work and fear that you may be dismissed."
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <TextView
         android:id="@+id/textView12"
@@ -73,7 +75,7 @@
         android:justificationMode="inter_word"
         android:text="Take a moment to consider your worry."
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +86,6 @@
         android:id="@+id/btnToCheckIt2"
         android:layout_width="275dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="88dp"
         android:text="NEXT"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -93,9 +94,10 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.376" />
+        app:layout_constraintVertical_bias="0.442" />
 
     <TextView
         android:id="@+id/lblTitle3"
@@ -265,14 +267,16 @@
                 android:layout_width="71dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Yes" />
+                android:text="Yes"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="No" />
+                android:text="No"
+                android:textSize="16sp" />
         </LinearLayout>
     </RadioGroup>
 

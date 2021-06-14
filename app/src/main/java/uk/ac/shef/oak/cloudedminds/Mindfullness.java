@@ -8,27 +8,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class CheckIt5 extends AppCompatActivity {
+public class Mindfullness extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_it5);
-
+        setContentView(R.layout.activity_mindfullness);
 
         ImageView home = findViewById(R.id.btnHome);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CheckIt5.this, MainActivity.class));
+                startActivity(new Intent(Mindfullness.this, MainActivity.class));
             }
         });
 
-        Button changeit = findViewById(R.id.btnToChangeIt);
-        changeit.setOnClickListener(new View.OnClickListener() {
+        Button mind2 = findViewById(R.id.btnToMind2);
+        mind2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CheckIt5.this, ChangeIt.class));
+                startActivity(new Intent(Mindfullness.this, Mindfulness2.class));
             }
         });
     }

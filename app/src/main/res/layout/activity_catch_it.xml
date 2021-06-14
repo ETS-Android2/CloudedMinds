@@ -137,127 +137,107 @@
             app:layout_constraintVertical_bias="0.015" />
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+    <Button
+        android:id="@+id/btnNextCatchIt"
+        android:layout_width="275dp"
+        android:layout_height="70dp"
+        android:text="NEXT"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:backgroundTint="#C2E1E4"
+        app:icon="@drawable/ic_start"
+        app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDate"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:id="@+id/lblDate"
+        android:layout_width="340dp"
+        android:layout_height="25dp"
+        android:text="What was the date of this event?"
+        android:textColor="#0C4863"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEvent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
+        android:id="@+id/lblEvent"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:text="What is the event that made you feel strong emotions?"
+        android:textColor="#0C4863"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:text="The way we perceive certain situations can affect our feelings and mood."
+        android:textColor="#0C4863"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle2"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <TextView
+        android:id="@+id/lblTitle2"
+        android:layout_width="400dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Catch Those Worries"
+        android:textColor="#0A80B6"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/txtEvent"
+        android:layout_width="340dp"
+        android:layout_height="170dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Enter the event here."
+        android:inputType="textMultiLine"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblEvent"
+        app:layout_constraintVertical_bias="0.0" />
 
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="340dp"
+        android:layout_height="75dp"
+        android:ems="10"
+        android:hint="DD/MM/YYYY"
+        android:inputType="date"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDate"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <Button
-                android:id="@+id/btnNextCatchIt"
-                android:layout_width="275dp"
-                android:layout_height="70dp"
-                android:text="NEXT"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                app:backgroundTint="#C2E1E4"
-                app:icon="@drawable/ic_start"
-                app:iconTint="#000000"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.505"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDate"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <TextView
-                android:id="@+id/lblDate"
-                android:layout_width="340dp"
-                android:layout_height="32dp"
-                android:text="What was the date of this event?"
-                android:textColor="#0C4863"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.518"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtEvent"
-                app:layout_constraintVertical_bias="0.036" />
-
-            <TextView
-                android:id="@+id/lblEvent"
-                android:layout_width="340dp"
-                android:layout_height="46dp"
-                android:text="What is the event that made you feel strong emotions?"
-                android:textColor="#0C4863"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.521"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="340dp"
-                android:layout_height="46dp"
-                android:text="The way we perceive certain situations can affect our feelings and mood."
-                android:textColor="#0C4863"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lblTitle2"
-                app:layout_constraintVertical_bias="0.014" />
-
-            <TextView
-                android:id="@+id/lblTitle2"
-                android:layout_width="400dp"
-                android:layout_height="35dp"
-                android:fontFamily="@font/baloo"
-                android:gravity="center|center_horizontal|center_vertical"
-                android:text="Catch Those Worries"
-                android:textColor="#0A80B6"
-                android:textSize="28sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <EditText
-                android:id="@+id/txtEvent"
-                android:layout_width="340dp"
-                android:layout_height="170dp"
-                android:ems="10"
-                android:gravity="start|top"
-                android:hint="Enter the event here."
-                android:inputType="textMultiLine"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.521"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lblEvent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <EditText
-                android:id="@+id/txtDate"
-                android:layout_width="340dp"
-                android:layout_height="50dp"
-                android:ems="10"
-                android:hint="DD/MM/YYYY"
-                android:inputType="date"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lblDate"
-                app:layout_constraintVertical_bias="0.0" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

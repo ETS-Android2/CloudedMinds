@@ -28,14 +28,16 @@
                 android:layout_width="71dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Yes" />
+                android:text="Yes"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="No" />
+                android:text="No"
+                android:textSize="16sp" />
         </LinearLayout>
     </RadioGroup>
 
@@ -46,36 +48,38 @@
         android:justificationMode="inter_word"
         android:text='In this event, have you "mind read"?'
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.063" />
 
     <TextView
         android:id="@+id/lblTitle4"
         android:layout_width="340dp"
-        android:layout_height="30dp"
+        android:layout_height="46dp"
         android:fontFamily="@font/baloo"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="Mind Reading"
         android:textColor="#0A80B6"
-        android:textSize="22sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.049" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="87dp"
         android:justificationMode="inter_word"
         android:text="We sometimes believe we know what others are thinking and if our mood is low, we may expect that they are thinking badly of us."
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,16 +89,17 @@
     <TextView
         android:id="@+id/textView14"
         android:layout_width="340dp"
-        android:layout_height="80dp"
+        android:layout_height="87dp"
         android:justificationMode="inter_word"
         android:text='For example, if a friend is quiet you may think "that is because she thinks I am boring". Or we may predict a negative outcome before it happens.'
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <TextView
         android:id="@+id/textView12"
@@ -104,7 +109,7 @@
         android:justificationMode="inter_word"
         android:text="Take a moment to consider your worry."
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,10 +128,9 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.38" />
 
     <TextView
         android:id="@+id/lblTitle3"

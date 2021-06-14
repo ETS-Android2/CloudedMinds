@@ -28,14 +28,16 @@
                 android:layout_width="71dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Yes" />
+                android:text="Yes"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="No" />
+                android:text="No"
+                android:textSize="16sp" />
         </LinearLayout>
     </RadioGroup>
 
@@ -173,40 +175,41 @@
     <TextView
         android:id="@+id/textView10"
         android:layout_width="340dp"
-        android:layout_height="25dp"
-        android:justificationMode="inter_word"
+        android:layout_height="45dp"
         android:text="In this event, have you ignored the positive?"
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.085" />
 
     <TextView
         android:id="@+id/lblTitle4"
         android:layout_width="340dp"
-        android:layout_height="30dp"
+        android:layout_height="46dp"
         android:fontFamily="@font/baloo"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="Ignoring the Positive"
         android:textColor="#0A80B6"
-        android:textSize="22sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.04" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="340dp"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:justificationMode="inter_word"
         android:text="Sometimes we tend to focus our thinking on negative or bad events and ignore the positive or good events."
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -216,15 +219,16 @@
     <TextView
         android:id="@+id/textView14"
         android:layout_width="340dp"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:text="For example, you may have many good friends who you have known for years but you concentrate and worry about one that has fallen out with you."
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.018" />
 
     <TextView
         android:id="@+id/textView12"
@@ -234,7 +238,7 @@
         android:justificationMode="inter_word"
         android:text="Take a moment to consider your worry."
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -253,10 +257,9 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintVertical_bias="0.362" />
 
     <TextView
         android:id="@+id/lblTitle3"

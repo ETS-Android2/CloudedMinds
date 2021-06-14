@@ -4,109 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CheckIt2">
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="190dp"
-        android:layout_height="67dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.041">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="71dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Yes"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No"
-                android:textSize="16sp" />
-        </LinearLayout>
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="340dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="296dp"
-        android:justificationMode="inter_word"
-        android:text="In this event, have you over-generalised?"
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.243" />
-
-    <TextView
-        android:id="@+id/lblTitle4"
-        android:layout_width="340dp"
-        android:layout_height="46dp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="Over-Generalising"
-        android:textColor="#0A80B6"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.04000002" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="340dp"
-        android:layout_height="110dp"
-        android:justificationMode="inter_word"
-        android:text="Sometimes, we generalise one small thing. For example, if one of your daily tasks has not been finished, you may thing, &quot;I've achieved nothing, today has been pointless&quot;."
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle4"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="340dp"
-        android:layout_height="30dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:justificationMode="inter_word"
-        android:text="Take a moment to consider your worry."
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle3"
-        app:layout_constraintVertical_bias="0.0" />
+    tools:context=".ChangeIt">
 
     <Button
-        android:id="@+id/btnToCheckIt3"
+        android:id="@+id/btnToChangeIt2"
         android:layout_width="275dp"
         android:layout_height="70dp"
+        android:layout_marginBottom="88dp"
         android:text="NEXT"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -116,24 +20,52 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.89" />
 
     <TextView
-        android:id="@+id/lblTitle3"
-        android:layout_width="284dp"
-        android:layout_height="35dp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="Check Those Worries"
-        android:textColor="#0A80B6"
-        android:textSize="28sp"
+        android:id="@+id/textView16"
+        android:layout_width="340dp"
+        android:layout_height="90dp"
+        android:justificationMode="inter_word"
+        android:text="The thought: &quot;I'm no good at my job&quot;, could be balanced with: &quot;my boss said how much he appreciated the piece of work I did yesterday&quot;."
+        android:textColor="#0C4863"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="340dp"
+        android:layout_height="66dp"
+        android:justificationMode="inter_word"
+        android:text="When you have a negative, critical thought, balance it out by making a more accurate and positive statement to yourself."
+        android:textColor="#0C4863"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="A useful technique to try is called balancing."
+        android:textColor="#0C4863"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle3"
+        app:layout_constraintVertical_bias="0.045" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -161,7 +93,7 @@
                 android:layout_marginRight="88dp"
                 android:fontFamily="@font/baloo"
                 android:gravity="bottom|center_horizontal"
-                android:text="Check It"
+                android:text="Change It"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -228,7 +160,7 @@
             android:id="@+id/txtCheckIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Check It"
+            android:text="@string/checkit"
             android:textColor="#000000"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -254,7 +186,7 @@
             android:id="@+id/txtChangeIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/changeit"
+            android:text="Change It"
             android:textColor="#000000"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -264,5 +196,21 @@
             app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
             app:layout_constraintVertical_bias="0.015" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblTitle3"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Change Those Worries"
+        android:textColor="#0A80B6"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

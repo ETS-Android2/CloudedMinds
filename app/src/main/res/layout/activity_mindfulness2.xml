@@ -1,73 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroScreen">
+    tools:context=".Mindfulness2">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="317dp"
-        android:layout_height="79dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center_vertical"
+        android:id="@+id/textView31"
+        android:layout_width="340dp"
+        android:layout_height="110dp"
         android:justificationMode="inter_word"
-        android:text="Please make sure you are in a quiet place, where you will not be disturbed."
+        android:text="Try to make it a habit to spend a few minutes partaking in mindfulness everyday. The more you practice this exercise, the more it will help you to not get caught up in your negative thoughts."
         android:textColor="#0C4863"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintTop_toBottomOf="@+id/youtube_view"
+        app:layout_constraintVertical_bias="0.385" />
+
+    <Button
+        android:id="@+id/btnToMind3"
+        android:layout_width="275dp"
+        android:layout_height="70dp"
+        android:text="NEXT"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:backgroundTint="#C2E1E4"
+        app:icon="@drawable/ic_start"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31"
+        app:layout_constraintVertical_bias="0.444" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="317dp"
-        android:layout_height="79dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center_vertical"
+        android:id="@+id/textView30"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
         android:justificationMode="inter_word"
-        android:text="This may take some time, so please allocate a particular free time to complete this."
+        android:text="Please take a moment to watch this short video on mindfulness and follow its steps."
         android:textColor="#0C4863"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle8"
+        app:layout_constraintVertical_bias="0.046" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="Before you start:"
-        android:textColor="#0C4863"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.032" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/lblTitle8"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
         android:fontFamily="@font/baloo"
-        android:text="Sit back, relax and let's start!"
-        android:textColor="#0C4863"
-        android:textSize="22sp"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Mindfulness"
+        android:textColor="#0A80B6"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        app:layout_constraintVertical_bias="0.048" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -95,7 +94,7 @@
                 android:layout_marginRight="88dp"
                 android:fontFamily="@font/baloo"
                 android:gravity="bottom|center_horizontal"
-                android:text="Before You Start"
+                android:text="Mindfulness"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -120,34 +119,15 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_view"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo"
-        android:text="Hello!"
-        android:textColor="#0C4863"
-        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <Button
-        android:id="@+id/btnStartSession"
-        android:layout_width="275dp"
-        android:layout_height="70dp"
-        android:text="START"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:backgroundTint="#C2E1E4"
-        app:icon="@drawable/ic_start"
-        app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.42000002" />
+        app:layout_constraintTop_toBottomOf="@+id/textView30"
+        app:layout_constraintVertical_bias="0.113" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
