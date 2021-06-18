@@ -10,7 +10,6 @@
         android:id="@+id/btnToChangeIt2"
         android:layout_width="275dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="88dp"
         android:text="NEXT"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -21,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.89" />
+        app:layout_constraintVertical_bias="0.63" />
 
     <TextView
         android:id="@+id/textView16"

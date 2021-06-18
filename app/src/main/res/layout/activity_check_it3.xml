@@ -6,41 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".CheckIt3">
 
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="190dp"
-        android:layout_height="67dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.041">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="71dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Yes"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No"
-                android:textSize="16sp" />
-        </LinearLayout>
-    </RadioGroup>
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
@@ -60,7 +25,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtHeading3"
                 android:layout_width="200dp"
                 android:layout_height="43dp"
                 android:layout_marginEnd="88dp"
@@ -173,21 +138,22 @@
 
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/txtCheck8"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:text="In this event, have you ignored the positive?"
         android:textColor="#0C4863"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintVertical_bias="0.04000002" />
 
     <TextView
-        android:id="@+id/lblTitle4"
+        android:id="@+id/txtIgnoringThePositive"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:fontFamily="@font/baloo"
@@ -196,14 +162,14 @@
         android:textColor="#0A80B6"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCheck6"
+        app:layout_constraintVertical_bias="0.045" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/txtCheck7"
         android:layout_width="340dp"
         android:layout_height="70dp"
         android:justificationMode="inter_word"
@@ -213,7 +179,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/txtIgnoringThePositive"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -225,13 +191,13 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.018" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCheck7"
+        app:layout_constraintVertical_bias="0.00999999" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/txtCheck6"
         android:layout_width="340dp"
         android:layout_height="30dp"
         android:gravity="center_horizontal|center_vertical"
@@ -241,9 +207,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCheckThoseWorries"
+        app:layout_constraintVertical_bias="0.00999999" />
 
     <Button
         android:id="@+id/btnToCheckIt4"
@@ -258,11 +225,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.362" />
+        app:layout_constraintTop_toBottomOf="@+id/rdgIgnorePositive"
+        app:layout_constraintVertical_bias="0.39" />
 
     <TextView
-        android:id="@+id/lblTitle3"
+        android:id="@+id/txtCheckThoseWorries"
         android:layout_width="284dp"
         android:layout_height="35dp"
         android:fontFamily="@font/baloo"
@@ -276,5 +243,36 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/rdgIgnorePositive"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCheck8"
+        app:layout_constraintVertical_bias="0.060000002">
+
+
+        <RadioButton
+            android:id="@+id/btnYesIgnore"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yes"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/btnNoIgnore"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="No"
+            android:textSize="16sp" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,105 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mindfullness">
-
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="340dp"
-        android:layout_height="46dp"
-        android:justificationMode="inter_word"
-        android:text="Sometimes no matter how hard we try, our thoughts will not be changed."
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle6"
-        app:layout_constraintVertical_bias="0.023" />
+    tools:context=".TheEnd">
 
     <Button
-        android:id="@+id/btnToMind2"
+        android:id="@+id/btnFinish"
         android:layout_width="275dp"
         android:layout_height="70dp"
-        android:text="NEXT"
+        android:text="FINISH"
         android:textColor="#000000"
         android:textSize="20sp"
         app:backgroundTint="#C2E1E4"
-        app:icon="@drawable/ic_start"
+        app:icon="@drawable/ic_finish"
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView28"
-        app:layout_constraintVertical_bias="0.57" />
+        app:layout_constraintTop_toBottomOf="@+id/textView37"
+        app:layout_constraintVertical_bias="0.396" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/textView37"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:justificationMode="inter_word"
-        android:text="Sometimes no matter how hard we try, our thoughts will not be changed."
+        android:text="Please try the session again when you feel the need."
         android:textColor="#0C4863"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle6"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toBottomOf="@+id/textView36"
+        app:layout_constraintVertical_bias="0.043" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/textView36"
         android:layout_width="340dp"
         android:layout_height="46dp"
-        android:text="A form of meditation called mindfulness can be really useful."
+        android:justificationMode="inter_word"
+        android:text="Your entered details will be saved in the Diary, located in the home screen."
         android:textColor="#0C4863"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle10"
         app:layout_constraintVertical_bias="0.109" />
 
     <TextView
-        android:id="@+id/textView26"
-        android:layout_width="340dp"
-        android:layout_height="67dp"
-        android:justificationMode="inter_word"
-        android:text="This can make us feel useless for not being able to challenge our thoughts well enough and increase self-critical thoughts."
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25"
-        app:layout_constraintVertical_bias="0.019" />
-
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="340dp"
-        android:layout_height="87dp"
-        android:justificationMode="inter_word"
-        android:text="Mindfulness is about paying attention to the present moment, in a non-judging way. Focussing on now rather than the past or future can be incredibly helpful. "
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        app:layout_constraintVertical_bias="0.034" />
-
-    <TextView
-        android:id="@+id/lblTitle6"
+        android:id="@+id/lblTitle10"
         android:layout_width="300dp"
-        android:layout_height="35dp"
+        android:layout_height="80dp"
         android:fontFamily="@font/baloo"
         android:gravity="center|center_horizontal|center_vertical"
-        android:text="Mindfulness"
+        android:text="You have reached the end of the session"
         android:textColor="#0A80B6"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -138,7 +94,7 @@
                 android:layout_marginRight="88dp"
                 android:fontFamily="@font/baloo"
                 android:gravity="bottom|center_horizontal"
-                android:text="Mindfulness"
+                android:text="The End"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"

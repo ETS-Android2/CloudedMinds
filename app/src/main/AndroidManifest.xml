@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudedMinds">
-        <activity android:name=".Mindfulness2"></activity>
+        <activity android:name=".TheEnd"></activity>
+        <activity android:name=".Acceptance" />
+        <activity android:name=".Mindfulness2" />
         <activity android:name=".Mindfullness" />
         <activity android:name=".Rumination" />
         <activity android:name=".ChangeIt2" />

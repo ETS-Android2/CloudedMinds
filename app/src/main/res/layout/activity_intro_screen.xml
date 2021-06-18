@@ -8,7 +8,7 @@
     tools:context=".IntroScreen">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtIntro2"
         android:layout_width="317dp"
         android:layout_height="79dp"
         android:fontFamily="sans-serif"
@@ -21,11 +21,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntro1"
         app:layout_constraintVertical_bias="0.076" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtIntro3"
         android:layout_width="317dp"
         android:layout_height="79dp"
         android:fontFamily="sans-serif"
@@ -37,11 +37,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntro2"
         app:layout_constraintVertical_bias="0.057" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtIntro1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
@@ -52,11 +52,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/txtHello"
         app:layout_constraintVertical_bias="0.032" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtIntro4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo"
@@ -66,7 +66,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntro3"
         app:layout_constraintVertical_bias="0.192" />
 
     <androidx.appcompat.widget.Toolbar
@@ -88,7 +88,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtHeading1"
                 android:layout_width="200dp"
                 android:layout_height="43dp"
                 android:layout_marginEnd="88dp"
@@ -121,7 +121,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtHello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo"
@@ -147,7 +147,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntro4"
         app:layout_constraintVertical_bias="0.42000002" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

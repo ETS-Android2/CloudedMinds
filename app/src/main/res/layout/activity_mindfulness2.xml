@@ -16,13 +16,13 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/youtube_view"
-        app:layout_constraintVertical_bias="0.385" />
+        app:layout_constraintTop_toBottomOf="@+id/btnVideo"
+        app:layout_constraintVertical_bias="0.187" />
 
     <Button
-        android:id="@+id/btnToMind3"
+        android:id="@+id/btnToAccept"
         android:layout_width="275dp"
         android:layout_height="70dp"
         android:text="NEXT"
@@ -35,7 +35,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView31"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintVertical_bias="0.49" />
+
+    <Button
+        android:id="@+id/btnVideo"
+        android:layout_width="275dp"
+        android:layout_height="70dp"
+        android:text="OPEN VIDEO"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:backgroundTint="#C2E1E4"
+        app:icon="@drawable/ic_video"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30"
+        app:layout_constraintVertical_bias="0.122" />
 
     <TextView
         android:id="@+id/textView30"
@@ -118,16 +134,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
-
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/youtube_view"
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView30"
-        app:layout_constraintVertical_bias="0.113" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,24 +7,25 @@
     tools:context=".CheckIt">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/lblCatastrophising"
         android:layout_width="340dp"
         android:layout_height="25dp"
         android:justificationMode="inter_word"
         android:text="In this event, have you catastrophised?"
         android:textColor="#0C4863"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.097" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCheck3"
+        app:layout_constraintVertical_bias="0.054" />
 
     <TextView
-        android:id="@+id/lblTitle4"
+        android:id="@+id/txtCatastrophising"
         android:layout_width="340dp"
-        android:layout_height="30dp"
+        android:layout_height="46dp"
         android:fontFamily="@font/baloo"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="Catastrophising"
@@ -34,11 +35,11 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/txtCheck1"
         app:layout_constraintVertical_bias="0.045" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/txtCheck2"
         android:layout_width="340dp"
         android:layout_height="90dp"
         android:justificationMode="inter_word"
@@ -47,13 +48,12 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle4"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCatastrophising"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/txtCheck3"
         android:layout_width="340dp"
         android:layout_height="50dp"
         android:justificationMode="inter_word"
@@ -64,11 +64,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCheck2"
+        app:layout_constraintVertical_bias="0.00999999" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/txtCheck1"
         android:layout_width="340dp"
         android:layout_height="30dp"
         android:gravity="center_horizontal|center_vertical"
@@ -78,9 +78,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCheckThoseWorries"
+        app:layout_constraintVertical_bias="0.00999999" />
 
     <Button
         android:id="@+id/btnToCheckIt2"
@@ -94,13 +95,12 @@
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.442" />
+        app:layout_constraintTop_toBottomOf="@+id/rdgCatastrophising"
+        app:layout_constraintVertical_bias="0.485" />
 
     <TextView
-        android:id="@+id/lblTitle3"
+        android:id="@+id/txtCheckThoseWorries"
         android:layout_width="284dp"
         android:layout_height="35dp"
         android:fontFamily="@font/baloo"
@@ -134,7 +134,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtHeading3"
                 android:layout_width="200dp"
                 android:layout_height="43dp"
                 android:layout_marginEnd="88dp"
@@ -245,39 +245,36 @@
             app:layout_constraintVertical_bias="0.015" />
     </LinearLayout>
 
+
     <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="190dp"
-        android:layout_height="67dp"
+        android:id="@+id/rdgCatastrophising"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.041">
+        app:layout_constraintTop_toBottomOf="@+id/lblCatastrophising"
+        app:layout_constraintVertical_bias="0.07999998">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <RadioButton
+            android:id="@+id/btnYesCat"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:text="Yes"
+            android:textSize="16sp" />
 
+        <RadioButton
+            android:id="@+id/btnNoCat"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="No"
+            android:textSize="16sp" />
 
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="71dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Yes"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No"
-                android:textSize="16sp" />
-        </LinearLayout>
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

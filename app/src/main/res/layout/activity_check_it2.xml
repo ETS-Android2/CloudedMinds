@@ -6,43 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".CheckIt2">
 
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="190dp"
-        android:layout_height="67dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.041">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="71dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Yes"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No"
-                android:textSize="16sp" />
-        </LinearLayout>
-    </RadioGroup>
-
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/lblOverGeneralised"
         android:layout_width="340dp"
         android:layout_height="25dp"
         android:layout_marginBottom="296dp"
@@ -50,15 +15,16 @@
         android:text="In this event, have you over-generalised?"
         android:textColor="#0C4863"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.243" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCheck5"
+        app:layout_constraintVertical_bias="0.219" />
 
     <TextView
-        android:id="@+id/lblTitle4"
+        android:id="@+id/txtOverGeneralising"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:fontFamily="@font/baloo"
@@ -70,11 +36,11 @@
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCheck4"
+        app:layout_constraintVertical_bias="0.050000012" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/txtCheck5"
         android:layout_width="340dp"
         android:layout_height="110dp"
         android:justificationMode="inter_word"
@@ -83,13 +49,13 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/txtOverGeneralising"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/txtCheck4"
         android:layout_width="340dp"
         android:layout_height="30dp"
         android:gravity="center_horizontal|center_vertical"
@@ -99,9 +65,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTitle3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCheckThoseWorries"
+        app:layout_constraintVertical_bias="0.00999999" />
 
     <Button
         android:id="@+id/btnToCheckIt3"
@@ -116,11 +83,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintTop_toBottomOf="@+id/rdgOverGeneralising"
+        app:layout_constraintVertical_bias="0.57" />
 
     <TextView
-        android:id="@+id/lblTitle3"
+        android:id="@+id/txtCheckThoseWorries"
         android:layout_width="284dp"
         android:layout_height="35dp"
         android:fontFamily="@font/baloo"
@@ -154,7 +121,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtHeading3"
                 android:layout_width="200dp"
                 android:layout_height="43dp"
                 android:layout_marginEnd="88dp"
@@ -264,5 +231,36 @@
             app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
             app:layout_constraintVertical_bias="0.015" />
     </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rdgOverGeneralising"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblOverGeneralised"
+        app:layout_constraintVertical_bias="0.06999999">
+
+
+        <RadioButton
+            android:id="@+id/btnYesOver"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yes"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/btnNoOver"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="No"
+            android:textSize="16sp" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
