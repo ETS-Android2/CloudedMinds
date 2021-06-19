@@ -3,6 +3,7 @@
     <string name="catchit"><a href="CatchIt">Catch It</a></string>
     <string name="checkit"><a href="CheckIt">Check It</a></string>
     <string name="changeit"><a href="ChangeIt">Change It</a></string>
+    <string name="leaflet">View the self help leaflet by clicking on this link: <a href="https://web.ntw.nhs.uk/selfhelp/leaflets/Depression%20and%20Low%20Mood.pdf">Depression and Low Mood</a></string>
     <string name="player_error">Error initializing YouTube player: %s</string>
     <string name="seek_to">Jump To</string>
     <string name="seek_to_hint">Seconds</string>
