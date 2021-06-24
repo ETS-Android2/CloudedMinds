@@ -2,9 +2,11 @@ package uk.ac.shef.oak.cloudedminds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,12 +26,14 @@ public class Mindfulness2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mindfulness2);
+        final Vibrator vibe = (Vibrator) Mindfulness2.this.getSystemService(Context.VIBRATOR_SERVICE);
 
         Button video = (Button)findViewById(R.id.btnVideo);
         video.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                vibe.vibrate(80);
                 // TODO Auto-generated method stub
                 String url = "https://www.youtube.com/watch?app=desktop&v=wfDTp2GogaQ";
 
@@ -43,6 +47,7 @@ public class Mindfulness2 extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(80);
                 startActivity(new Intent(Mindfulness2.this, MainActivity.class));
             }
         });
@@ -51,6 +56,7 @@ public class Mindfulness2 extends AppCompatActivity {
         acceptance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(80);
                 startActivity(new Intent(Mindfulness2.this, Acceptance.class));
             }
         });

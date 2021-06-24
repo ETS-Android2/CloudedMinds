@@ -2,8 +2,10 @@ package uk.ac.shef.oak.cloudedminds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,10 +16,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final Vibrator vibe = (Vibrator) MainActivity.this.getSystemService(Context.VIBRATOR_SERVICE);
+
         Button start = findViewById(R.id.btnStart);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(80);
                 startActivity(new Intent(MainActivity.this, IntroScreen.class));
             }
         });
@@ -26,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(80);
                 startActivity(new Intent(MainActivity.this, Settings.class));
             }
         });
@@ -34,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(80);
                 startActivity(new Intent(MainActivity.this, About.class));
             }
         });
@@ -42,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         diary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibe.vibrate(80);
                 startActivity(new Intent(MainActivity.this, Diary.class));
             }
         });
