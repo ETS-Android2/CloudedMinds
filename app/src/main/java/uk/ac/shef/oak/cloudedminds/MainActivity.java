@@ -37,5 +37,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, About.class));
             }
         });
+
+        Button diary = findViewById(R.id.btnDiary);
+        diary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Diary.class));
+            }
+        });
     }
 }
