@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -22,6 +23,8 @@ public class Mindfulness2 extends AppCompatActivity {
     //private static final int RECOVERY_REQUEST = 1;
     //private YouTubePlayerView youtubeView;
 
+    private MediaPlayer mp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -33,6 +36,8 @@ public class Mindfulness2 extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
+                mp.start();
                 vibe.vibrate(80);
                 // TODO Auto-generated method stub
                 String url = "https://www.youtube.com/watch?app=desktop&v=wfDTp2GogaQ";
@@ -47,6 +52,8 @@ public class Mindfulness2 extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
+                mp.start();
                 vibe.vibrate(80);
                 startActivity(new Intent(Mindfulness2.this, MainActivity.class));
             }
@@ -56,6 +63,8 @@ public class Mindfulness2 extends AppCompatActivity {
         acceptance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
+                mp.start();
                 vibe.vibrate(80);
                 startActivity(new Intent(Mindfulness2.this, Acceptance.class));
             }
