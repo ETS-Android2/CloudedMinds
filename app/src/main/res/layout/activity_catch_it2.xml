@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".CatchIt2">
 
+    <TextView
+        android:id="@+id/txtEventReceive"
+        android:layout_width="105dp"
+        android:layout_height="35dp"
+        android:text="Some text"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
+        app:layout_constraintTop_toTopOf="@+id/rdGroupMood"
+        app:layout_constraintVertical_bias="0.165" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
@@ -164,7 +177,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
-            android:id="@+id/rb"
+            android:id="@+id/rb1"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:text="1 (Low)"
@@ -177,7 +190,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <RadioButton
-            android:id="@+id/rb1"
+            android:id="@+id/rb2"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:text="2"
@@ -190,7 +203,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <RadioButton
-            android:id="@+id/rb2"
+            android:id="@+id/rb3"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:text="3"
@@ -203,7 +216,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <RadioButton
-            android:id="@+id/rb3"
+            android:id="@+id/rb4"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
             android:text="4"
@@ -216,7 +229,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <RadioButton
-            android:id="@+id/rb4"
+            android:id="@+id/rb5"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="5 (High)"
@@ -303,16 +316,16 @@
         app:layout_constraintVertical_bias="0.050000012" />
 
     <TextView
-        android:id="@+id/txtEventReceive"
+        android:id="@+id/txtDateReceive"
         android:layout_width="105dp"
         android:layout_height="35dp"
         android:text="Some text"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
-        app:layout_constraintTop_toTopOf="@+id/rdGroupMood"
-        app:layout_constraintVertical_bias="0.165" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEventReceive"
+        app:layout_constraintVertical_bias="0.028" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

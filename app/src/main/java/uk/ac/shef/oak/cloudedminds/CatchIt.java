@@ -44,8 +44,10 @@ public class CatchIt extends AppCompatActivity {
                 mp.start();
                 vibe.vibrate(80);
                 String txtEvent = event.getText().toString();
+                String txtDate = date.getText().toString();
                 Intent intent = new Intent(getApplicationContext(), CatchIt2.class);
                 intent.putExtra("event_txt", txtEvent);
+                intent.putExtra("date_txt", txtDate);
                 startActivity(intent);
             }
         });
