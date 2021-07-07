@@ -7,7 +7,7 @@
     tools:context=".ChangeIt2">
 
     <TextView
-        android:id="@+id/mindReceive"
+        android:id="@+id/mindReceive2"
         android:layout_width="58dp"
         android:layout_height="20dp"
         android:layout_marginBottom="16dp"
@@ -16,11 +16,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/criticalReceive2"
+        app:layout_constraintTop_toBottomOf="@+id/criticalReceive3"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/criticalReceive2"
+        android:id="@+id/criticalReceive3"
         android:layout_width="58dp"
         android:layout_height="20dp"
         android:layout_marginBottom="16dp"
@@ -29,24 +29,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ignoreReceive3"
+        app:layout_constraintTop_toBottomOf="@+id/ignoreReceive4"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/ignoreReceive3"
+        android:id="@+id/ignoreReceive4"
         android:layout_width="58dp"
         android:layout_height="20dp"
         android:layout_marginBottom="60dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/geneReceive4"
+        app:layout_constraintTop_toBottomOf="@+id/geneReceive5"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/ratingReceive6"
+        android:id="@+id/ratingReceive7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="276dp"
@@ -55,11 +55,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moodReceive6"
+        app:layout_constraintTop_toBottomOf="@+id/moodReceive7"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/catasReceive5"
+        android:id="@+id/catasReceive6"
         android:layout_width="58dp"
         android:layout_height="20dp"
         android:layout_marginBottom="24dp"
@@ -68,11 +68,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingReceive6"
+        app:layout_constraintTop_toBottomOf="@+id/ratingReceive7"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/geneReceive4"
+        android:id="@+id/geneReceive5"
         android:layout_width="58dp"
         android:layout_height="20dp"
         android:layout_marginBottom="24dp"
@@ -81,11 +81,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/catasReceive5"
+        app:layout_constraintTop_toBottomOf="@+id/catasReceive6"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/moodReceive6"
+        android:id="@+id/moodReceive7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -94,24 +94,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateReceive"
+        app:layout_constraintTop_toBottomOf="@+id/dateReceive8"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/dateReceive"
+        android:id="@+id/dateReceive8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventReceive"
+        app:layout_constraintTop_toBottomOf="@+id/eventReceive8"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/eventReceive"
+        android:id="@+id/eventReceive8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
@@ -120,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/rdGroup"
+        app:layout_constraintTop_toTopOf="@+id/rdgChangedRating"
         app:layout_constraintVertical_bias="0.044" />
 
     <Button
@@ -136,11 +136,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdGroup"
+        app:layout_constraintTop_toBottomOf="@+id/rdgChangedRating"
         app:layout_constraintVertical_bias="0.153" />
 
     <RadioGroup
-        android:id="@+id/rdGroup"
+        android:id="@+id/rdgChangedRating"
         android:layout_width="109dp"
         android:layout_height="220dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -391,7 +391,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/txtChangedMood"
         android:layout_width="340dp"
         android:layout_height="100dp"
         android:ems="10"
@@ -418,7 +418,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/txtChangedMood"
         app:layout_constraintVertical_bias="0.01999998" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

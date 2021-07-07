@@ -80,7 +80,6 @@ public class CheckIt5 extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                startActivity(new Intent(CheckIt5.this, ChangeIt.class));
                 String txtEvent = eventReceive.getText().toString();
                 String txtDate = dateReceive.getText().toString();
                 String txtMood = moodReceive.getText().toString();
@@ -92,7 +91,7 @@ public class CheckIt5 extends AppCompatActivity {
                 int selectedId = mindread.getCheckedRadioButtonId();
                 RadioButton mind = findViewById(selectedId);
                 String txtMind = mind.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), ChangeIt2.class);
+                Intent intent = new Intent(getApplicationContext(), ChangeIt.class);
                 intent.putExtra("event7_txt", txtEvent);
                 intent.putExtra("date7_txt", txtDate);
                 intent.putExtra("mood6_txt", txtMood);
@@ -102,6 +101,7 @@ public class CheckIt5 extends AppCompatActivity {
                 intent.putExtra("ignored3_txt", txtIgnore);
                 intent.putExtra("critical2_txt", txtCritical);
                 intent.putExtra("mind_txt", txtMind);
+                startActivity(intent);
             }
         });
     }

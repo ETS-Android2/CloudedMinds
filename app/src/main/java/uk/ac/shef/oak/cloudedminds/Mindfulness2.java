@@ -11,6 +11,7 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -19,9 +20,6 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 public class Mindfulness2 extends AppCompatActivity {
-
-    //private static final int RECOVERY_REQUEST = 1;
-    //private YouTubePlayerView youtubeView;
 
     private MediaPlayer mp;
 
@@ -59,6 +57,43 @@ public class Mindfulness2 extends AppCompatActivity {
             }
         });
 
+        TextView receiveEvent = findViewById(R.id.eventReceive11);
+        TextView receiveDate = findViewById(R.id.dateReceive11);
+        TextView receiveMood = findViewById(R.id.moodReceive10);
+        TextView receiveRating = findViewById(R.id.ratingReceive10);
+        TextView receiveCatas = findViewById(R.id.catasReceive9);
+        TextView receiveGene = findViewById(R.id.geneReceive8);
+        TextView receiveIgnore = findViewById(R.id.ignoreReceive7);
+        TextView receiveCritical = findViewById(R.id.criticalReceive6);
+        TextView receiveMind = findViewById(R.id.mindReceive5);
+        TextView receiveChangedMood = findViewById(R.id.changedmoodReceive3);
+        TextView receiveChangedRate = findViewById(R.id.changedrateReceive3);
+
+        Intent intent = getIntent();
+        String receivedEvent = intent.getStringExtra("event11_txt");
+        String receivedDate = intent.getStringExtra("date11_txt");
+        String receivedMood = intent.getStringExtra("mood10_txt");
+        String receivedRating = intent.getStringExtra("rating10_txt");
+        String receivedCatas = intent.getStringExtra("catastrophised9_txt");
+        String receivedGene = intent.getStringExtra("generalised8_txt");
+        String receivedIgnore = intent.getStringExtra("ignored7_txt");
+        String receivedCritical = intent.getStringExtra("critical6_txt");
+        String receivedMind = intent.getStringExtra("mind5_txt");
+        String receivedChangedMood = intent.getStringExtra("cmood3_txt");
+        String receivedChangedRate = intent.getStringExtra("crating3_txt");
+
+        receiveEvent.setText(receivedEvent);
+        receiveDate.setText(receivedDate);
+        receiveMood.setText(receivedMood);
+        receiveRating.setText(receivedRating);
+        receiveCatas.setText(receivedCatas);
+        receiveGene.setText(receivedGene);
+        receiveIgnore.setText(receivedIgnore);
+        receiveCritical.setText(receivedCritical);
+        receiveMind.setText(receivedMind);
+        receiveChangedMood.setText(receivedChangedMood);
+        receiveChangedRate.setText(receivedChangedRate);
+
         Button acceptance = findViewById(R.id.btnToAccept);
         acceptance.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,39 +104,5 @@ public class Mindfulness2 extends AppCompatActivity {
                 startActivity(new Intent(Mindfulness2.this, Acceptance.class));
             }
         });
-
-
-
-        /*youtubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
-        youtubeView.initialize(Config.YOUTUBE_API_KEY, this);*/
     }
-
-    /*@Override
-    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
-        if (!wasRestored) {
-            player.cueVideo("wfDTp2GogaQ");
-        }
-    }
-
-    @Override
-    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult errorReason) {
-        if (errorReason.isUserRecoverableError()) {
-            errorReason.getErrorDialog(this, RECOVERY_REQUEST).show();
-        } else {
-            String error = String.format(getString(R.string.player_error), errorReason.toString());
-            Toast.makeText(this, error, Toast.LENGTH_LONG).show();
-        }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == RECOVERY_REQUEST) {
-            // Retry initialization if user performed a recovery action
-            getYouTubePlayerProvider().initialize(Config.YOUTUBE_API_KEY, this);
-        }
-    }
-
-    protected YouTubePlayer.Provider getYouTubePlayerProvider() {
-        return youtubeView;
-    }*/
 }
