@@ -28,6 +28,17 @@ public class Mindfulness2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mindfulness2);
         final Vibrator vibe = (Vibrator) Mindfulness2.this.getSystemService(Context.VIBRATOR_SERVICE);
+        TextView eventReceive = findViewById(R.id.eventReceive11);
+        TextView dateReceive = findViewById(R.id.dateReceive11);
+        TextView moodReceive = findViewById(R.id.moodReceive10);
+        TextView ratingReceive = findViewById(R.id.ratingReceive10);
+        TextView catasReceive = findViewById(R.id.catasReceive9);
+        TextView geneReceive = findViewById(R.id.geneReceive8);
+        TextView ignoreReceive = findViewById(R.id.ignoreReceive7);
+        TextView criticalReceive = findViewById(R.id.criticalReceive6);
+        TextView mindReceive = findViewById(R.id.mindReceive5);
+        TextView changedMoodReceive = findViewById(R.id.changedmoodReceive3);
+        TextView changedRateReceive = findViewById(R.id.changedrateReceive3);
 
         Button video = (Button)findViewById(R.id.btnVideo);
         video.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +112,30 @@ public class Mindfulness2 extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                startActivity(new Intent(Mindfulness2.this, Acceptance.class));
+                String txtEvent = eventReceive.getText().toString();
+                String txtDate = dateReceive.getText().toString();
+                String txtMood = moodReceive.getText().toString();
+                String txtRating = ratingReceive.getText().toString();
+                String txtCatas = catasReceive.getText().toString();
+                String txtGene = geneReceive.getText().toString();
+                String txtIgnore = ignoreReceive.getText().toString();
+                String txtCritical = criticalReceive.getText().toString();
+                String txtMind = mindReceive.getText().toString();
+                String txtChangedMood = changedMoodReceive.getText().toString();
+                String txtChangedRating = changedRateReceive.getText().toString();
+                Intent intent = new Intent(getApplicationContext(), Acceptance.class);
+                intent.putExtra("event12_txt", txtEvent);
+                intent.putExtra("date12_txt", txtDate);
+                intent.putExtra("mood11_txt", txtMood);
+                intent.putExtra("rating11_txt", txtRating);
+                intent.putExtra("catastrophised10_txt", txtCatas);
+                intent.putExtra("generalised9_txt", txtGene);
+                intent.putExtra("ignored8_txt", txtIgnore);
+                intent.putExtra("critical7_txt", txtCritical);
+                intent.putExtra("mind6_txt", txtMind);
+                intent.putExtra("cmood4_txt", txtChangedMood);
+                intent.putExtra("crating4_txt", txtChangedRating);
+                startActivity(intent);
             }
         });
     }
