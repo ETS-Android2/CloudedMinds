@@ -1,5 +1,6 @@
 package uk.ac.shef.oak.cloudedminds;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -62,12 +63,29 @@ public class CatchIt2 extends AppCompatActivity {
                 int selectedId = moodrating.getCheckedRadioButtonId();
                 RadioButton moodRate = findViewById(selectedId);
                 String txtRating = moodRate.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), CheckIt.class);
-                intent.putExtra("event2_txt", txtEventReceive);
-                intent.putExtra("date2_txt", txtDateReceive);
-                intent.putExtra("mood_txt", txtMood);
-                intent.putExtra("rating_txt", txtRating);
-                startActivity(intent);
+                // Checks if fields are empty and allows user to move ahead when they've entered the details.
+                if(txtMood.isEmpty()){
+                    AlertDialog.Builder alert = new AlertDialog.Builder(CatchIt2.this);
+                    alert.setTitle("Empty Mood");
+                    alert.setMessage("Please enter the mood you experienced.");
+                    alert.setPositiveButton("OK",null);
+                    alert.show();
+                }
+                else if(txtRating.isEmpty()){
+                    AlertDialog.Builder alert = new AlertDialog.Builder(CatchIt2.this);
+                    alert.setTitle("Empty Rating");
+                    alert.setMessage("Please rate the strength of your mood.");
+                    alert.setPositiveButton("OK",null);
+                    alert.show();
+                }
+                else {
+                    Intent intent = new Intent(getApplicationContext(), CheckIt.class);
+                    intent.putExtra("event2_txt", txtEventReceive);
+                    intent.putExtra("date2_txt", txtDateReceive);
+                    intent.putExtra("mood_txt", txtMood);
+                    intent.putExtra("rating_txt", txtRating);
+                    startActivity(intent);
+                }
             }
         });
     }

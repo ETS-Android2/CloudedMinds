@@ -1,5 +1,6 @@
 package uk.ac.shef.oak.cloudedminds;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -98,19 +99,37 @@ public class ChangeIt2 extends AppCompatActivity {
                 int selectedId = changedRating.getCheckedRadioButtonId();
                 RadioButton difRate = findViewById(selectedId);
                 String txtChangedRating = difRate.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), Rumination.class);
-                intent.putExtra("event9_txt", txtEvent);
-                intent.putExtra("date9_txt", txtDate);
-                intent.putExtra("mood8_txt", txtMood);
-                intent.putExtra("rating8_txt", txtRating);
-                intent.putExtra("catastrophised7_txt", txtCatas);
-                intent.putExtra("generalised6_txt", txtGene);
-                intent.putExtra("ignored5_txt", txtIgnore);
-                intent.putExtra("critical4_txt", txtCritical);
-                intent.putExtra("mind3_txt", txtMind);
-                intent.putExtra("cmood_txt", txtChangedMood);
-                intent.putExtra("crating_txt", txtChangedRating);
-                startActivity(intent);
+
+                // Checks if fields are empty and allows user to move ahead when they've entered the details.
+                if(txtChangedMood.isEmpty()){
+                    AlertDialog.Builder alert = new AlertDialog.Builder(ChangeIt2.this);
+                    alert.setTitle("Empty Mood");
+                    alert.setMessage("Please enter your changed mood.");
+                    alert.setPositiveButton("OK",null);
+                    alert.show();
+                }
+                else if(txtChangedRating.isEmpty()){
+                    AlertDialog.Builder alert = new AlertDialog.Builder(ChangeIt2.this);
+                    alert.setTitle("Empty Rating");
+                    alert.setMessage("Please rate the current strength of your mood.");
+                    alert.setPositiveButton("OK",null);
+                    alert.show();
+                }
+                else {
+                    Intent intent = new Intent(getApplicationContext(), Rumination.class);
+                    intent.putExtra("event9_txt", txtEvent);
+                    intent.putExtra("date9_txt", txtDate);
+                    intent.putExtra("mood8_txt", txtMood);
+                    intent.putExtra("rating8_txt", txtRating);
+                    intent.putExtra("catastrophised7_txt", txtCatas);
+                    intent.putExtra("generalised6_txt", txtGene);
+                    intent.putExtra("ignored5_txt", txtIgnore);
+                    intent.putExtra("critical4_txt", txtCritical);
+                    intent.putExtra("mind3_txt", txtMind);
+                    intent.putExtra("cmood_txt", txtChangedMood);
+                    intent.putExtra("crating_txt", txtChangedRating);
+                    startActivity(intent);
+                }
             }
         });
     }

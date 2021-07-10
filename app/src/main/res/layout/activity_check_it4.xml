@@ -14,6 +14,7 @@
         android:layout_marginRight="168dp"
         android:layout_marginBottom="16dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -29,9 +30,10 @@
         android:layout_marginRight="152dp"
         android:layout_marginBottom="16dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toEndOf="@+id/moodReceive4"
         app:layout_constraintTop_toBottomOf="@+id/geneReceive2"
         app:layout_constraintVertical_bias="0.0" />
@@ -44,17 +46,20 @@
         android:layout_marginRight="92dp"
         android:layout_marginBottom="24dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toEndOf="@+id/eventReceive5"
         app:layout_constraintTop_toBottomOf="@+id/btnToCheckIt5"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.127" />
 
     <TextView
         android:id="@+id/ratingReceive4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -68,6 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -81,6 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -94,6 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -365,6 +373,7 @@
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="No"
             android:textSize="16sp" />
 

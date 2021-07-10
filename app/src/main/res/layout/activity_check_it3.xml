@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -38,6 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -50,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -63,12 +67,13 @@
         android:layout_height="20dp"
         android:layout_marginBottom="16dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintHorizontal_bias="0.405"
         app:layout_constraintStart_toEndOf="@+id/eventReceive4"
         app:layout_constraintTop_toBottomOf="@+id/btnToCheckIt4"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.072" />
 
     <TextView
         android:id="@+id/geneReceive"
@@ -78,6 +83,7 @@
         android:layout_marginRight="152dp"
         android:layout_marginBottom="16dp"
         android:text="TextView"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.978"
@@ -349,6 +355,7 @@
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:text="No"
             android:textSize="16sp" />
 

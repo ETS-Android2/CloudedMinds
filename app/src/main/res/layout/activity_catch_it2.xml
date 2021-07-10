@@ -12,6 +12,7 @@
         android:layout_height="35dp"
         android:text="Some text"
         android:textColor="#000000"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.297"
@@ -168,7 +169,7 @@
 
     <RadioGroup
         android:id="@+id/rdGroupMood"
-        android:layout_width="109dp"
+        android:layout_width="60dp"
         android:layout_height="220dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,7 +181,8 @@
             android:id="@+id/rb1"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
-            android:text="1 (Low)"
+            android:checked="true"
+            android:text="1"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -232,7 +234,7 @@
             android:id="@+id/rb5"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:text="5 (High)"
+            android:text="5"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -321,11 +323,40 @@
         android:layout_height="35dp"
         android:text="Some text"
         android:textColor="#000000"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
         app:layout_constraintTop_toBottomOf="@+id/txtEventReceive"
         app:layout_constraintVertical_bias="0.028" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Low)"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
+        app:layout_constraintTop_toTopOf="@+id/rdGroupMood"
+        app:layout_constraintVertical_bias="0.029999971" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(High)"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
+        app:layout_constraintTop_toTopOf="@+id/rdGroupMood"
+        app:layout_constraintVertical_bias="0.53999996" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
