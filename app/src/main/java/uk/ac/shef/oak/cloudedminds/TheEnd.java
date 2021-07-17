@@ -11,15 +11,31 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import io.reactivex.disposables.CompositeDisposable;
+import retrofit2.Retrofit;
+import uk.ac.shef.oak.cloudedminds.Retrofit.IMyService;
+import uk.ac.shef.oak.cloudedminds.Retrofit.RetrofitClient;
+
 public class TheEnd extends AppCompatActivity {
 
     private MediaPlayer mp;
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    IMyService iMyService;
+
+    @Override
+    protected void onStop(){
+        compositeDisposable.clear();
+        super.onStop();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_the_end);
         final Vibrator vibe = (Vibrator) TheEnd.this.getSystemService(Context.VIBRATOR_SERVICE);
+
+        Retrofit retrofitClient = RetrofitClient.getInstance();
+        iMyService = retrofitClient.create(IMyService.class);
 
         ImageView home = findViewById(R.id.btnHome);
         home.setOnClickListener(new View.OnClickListener() {
@@ -69,5 +85,9 @@ public class TheEnd extends AppCompatActivity {
         receiveChangedMood.setText(receivedChangedMood);
         receiveChangedRate.setText(receivedChangedRate);
 
+    }
+
+    private void dataEntry(String event, String date, String mood, Integer rating, String catastrophise, String generalise, String ignore, String critical, String mind, String changedMood, String changedRate){
+        compositeDisposable.add()
     }
 }

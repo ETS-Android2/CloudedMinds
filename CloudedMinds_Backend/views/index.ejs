@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CloudedMinds</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="TitleBox" style="z-index:1">
+      <span class="TitleSpan">CloudedMinds</span>
+    </div>
+    <p>Worries pass by like Clouds</p>
+
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Event</th>
+        <th>Date</th>
+        <th>Mood</th>
+        <th>Mood Rating</th>
+        <th>Catastrophised</th>
+        <th>Over-Generalised</th>
+        <th>Ignored the Positive</th>
+        <th>Self-Critical</th>
+        <th>Mind Read</th>
+        <th>Changed Mood</th>
+        <th>Changed Rating</th>
+      </tr>
+    <thead>
+   <tbody>
+    <% for(var i=0; i< data.length; i++) {%>
+      <tr>
+        <td><%= data[i].event %></td>
+        <td><%= data[i].date %></td>
+        <td><%= data[i].mood %></td>
+        <td><%= data[i].mood_rating %></td>
+        <td><%= data[i].catastrophise %></td>
+        <td><%= data[i].generalise %></td>
+        <td><%= data[i].ignoring %></td>
+        <td><%= data[i].self_critical %></td>
+        <td><%= data[i].mind_reading %></td>
+        <td><%= data[i].changed_mood %></td>
+        <td><%= data[i].changed_rating %></td>
+      </tr>
+    <% } %>
+    </tbody>
+  </table>
+  </body>
+</html>

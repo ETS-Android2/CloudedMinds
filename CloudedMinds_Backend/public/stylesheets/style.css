@@ -1,0 +1,40 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Website title styles */
+.TitleBox {
+  position: relative;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  padding-top: 30px;
+}
+
+.TitleBox span.TitleSpan {
+  color: #0A80B6;
+  font-family: "Cooper Black";
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+p{
+  text-align: center;
+  font-family: "Cooper Black";
+  color: #0C4863;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.table th {
+  font-size: 16px;
+  text-align: center;
+}
+
