@@ -20,7 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/geneReceive10"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/eventReceive13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView37"
         app:layout_constraintVertical_bias="0.045" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/mindReceive7"
         android:layout_width="58dp"
         android:layout_height="20dp"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView37"
         app:layout_constraintVertical_bias="0.036" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/catasReceive11"
         android:layout_width="58dp"
         android:layout_height="20dp"
@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView37"
         app:layout_constraintVertical_bias="0.037" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/ratingReceive12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/moodReceive12"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/geneReceive10"
         android:layout_width="58dp"
         android:layout_height="20dp"
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/catasReceive11"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/moodReceive12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dateReceive13"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/dateReceive13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
         app:layout_constraintTop_toBottomOf="@+id/eventReceive13"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/changedrateReceive5"
         android:layout_width="58dp"
         android:layout_height="20dp"
@@ -132,7 +132,7 @@
         app:layout_constraintTop_toBottomOf="@+id/changedmoodReceive5"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/changedmoodReceive5"
         android:layout_width="58dp"
         android:layout_height="20dp"
@@ -145,7 +145,7 @@
         app:layout_constraintTop_toBottomOf="@+id/mindReceive7"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/criticalReceive8"
         android:layout_width="58dp"
         android:layout_height="20dp"

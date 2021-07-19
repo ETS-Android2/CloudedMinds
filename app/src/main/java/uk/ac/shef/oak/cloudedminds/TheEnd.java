@@ -7,11 +7,17 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import uk.ac.shef.oak.cloudedminds.Retrofit.IMyService;
 import uk.ac.shef.oak.cloudedminds.Retrofit.RetrofitClient;
@@ -85,9 +91,35 @@ public class TheEnd extends AppCompatActivity {
         receiveChangedMood.setText(receivedChangedMood);
         receiveChangedRate.setText(receivedChangedRate);
 
+
+
+        Button end = findViewById(R.id.btnFinish);
+        end.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
+                mp.start();
+                vibe.vibrate(80);
+                dataEntry(receiveEvent.getText().toString(), receiveDate.getText().toString(), receiveMood.getText().toString(),
+                        Integer.parseInt(receiveRating.getText().toString()), receiveCatas.getText().toString(), receiveGene.getText().toString(),
+                        receiveIgnore.getText().toString(), receiveCritical.getText().toString(), receiveMind.getText().toString(),
+                        receiveChangedMood.getText().toString(), Integer.parseInt(receiveChangedRate.getText().toString()));
+
+                startActivity(new Intent(TheEnd.this, MainActivity.class));
+            }
+        });
+
     }
 
-    private void dataEntry(String event, String date, String mood, Integer rating, String catastrophise, String generalise, String ignore, String critical, String mind, String changedMood, String changedRate){
-        compositeDisposable.add()
+    private void dataEntry(String event, String date, String mood, Integer rating, String catastrophise, String generalise, String ignore, String critical, String mind, String changedMood, Integer changedRate){
+        compositeDisposable.add(iMyService.enterData(event, date, mood, rating, catastrophise, generalise, ignore, critical, mind, changedMood, changedRate)
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(new Consumer<String>() {
+            @Override
+            public void accept(String response) throws Exception {
+                Log.i("myTag", "Data sent to database.");
+            }
+        }));
     }
 }
