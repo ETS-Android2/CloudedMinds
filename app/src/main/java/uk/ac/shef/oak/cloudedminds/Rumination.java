@@ -2,11 +2,14 @@ package uk.ac.shef.oak.cloudedminds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +22,7 @@ public class Rumination extends AppCompatActivity {
 
     private MediaPlayer mp;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,6 +120,26 @@ public class Rumination extends AppCompatActivity {
                 intent.putExtra("cmood2_txt", txtChangedMood);
                 intent.putExtra("crating2_txt", txtChangedRating);
                 startActivity(intent);
+            }
+        });
+
+        mind.setOnTouchListener(new View.OnTouchListener(){
+            @SuppressLint("ClickableViewAccessibility")
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    // When the user clicks the Button
+                    case MotionEvent.ACTION_DOWN:
+                        mind.setTypeface(Typeface.DEFAULT_BOLD);
+                        break;
+
+                    // When the user releases the Button
+                    case MotionEvent.ACTION_UP:
+                        mind.setTypeface(Typeface.DEFAULT);
+                        break;
+                }
+                return false;
             }
         });
     }

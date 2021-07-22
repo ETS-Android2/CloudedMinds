@@ -2,11 +2,14 @@ package uk.ac.shef.oak.cloudedminds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,6 +21,7 @@ public class ChangeIt extends AppCompatActivity {
 
     private MediaPlayer mp;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +106,26 @@ public class ChangeIt extends AppCompatActivity {
                 intent.putExtra("critical3_txt", txtCritical);
                 intent.putExtra("mind2_txt", txtMind);
                 startActivity(intent);
+            }
+        });
+
+        changeit2.setOnTouchListener(new View.OnTouchListener(){
+            @SuppressLint("ClickableViewAccessibility")
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    // When the user clicks the Button
+                    case MotionEvent.ACTION_DOWN:
+                        changeit2.setTypeface(Typeface.DEFAULT_BOLD);
+                        break;
+
+                    // When the user releases the Button
+                    case MotionEvent.ACTION_UP:
+                        changeit2.setTypeface(Typeface.DEFAULT);
+                        break;
+                }
+                return false;
             }
         });
     }

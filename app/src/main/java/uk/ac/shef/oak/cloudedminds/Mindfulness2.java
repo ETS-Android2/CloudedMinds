@@ -2,12 +2,15 @@ package uk.ac.shef.oak.cloudedminds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,6 +26,7 @@ public class Mindfulness2 extends AppCompatActivity {
 
     private MediaPlayer mp;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -54,6 +58,26 @@ public class Mindfulness2 extends AppCompatActivity {
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
+            }
+        });
+
+        video.setOnTouchListener(new View.OnTouchListener(){
+            @SuppressLint("ClickableViewAccessibility")
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    // When the user clicks the Button
+                    case MotionEvent.ACTION_DOWN:
+                        video.setTypeface(Typeface.DEFAULT_BOLD);
+                        break;
+
+                    // When the user releases the Button
+                    case MotionEvent.ACTION_UP:
+                        video.setTypeface(Typeface.DEFAULT);
+                        break;
+                }
+                return false;
             }
         });
 
@@ -136,6 +160,26 @@ public class Mindfulness2 extends AppCompatActivity {
                 intent.putExtra("cmood4_txt", txtChangedMood);
                 intent.putExtra("crating4_txt", txtChangedRating);
                 startActivity(intent);
+            }
+        });
+
+        acceptance.setOnTouchListener(new View.OnTouchListener(){
+            @SuppressLint("ClickableViewAccessibility")
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    // When the user clicks the Button
+                    case MotionEvent.ACTION_DOWN:
+                        acceptance.setTypeface(Typeface.DEFAULT_BOLD);
+                        break;
+
+                    // When the user releases the Button
+                    case MotionEvent.ACTION_UP:
+                        acceptance.setTypeface(Typeface.DEFAULT);
+                        break;
+                }
+                return false;
             }
         });
     }

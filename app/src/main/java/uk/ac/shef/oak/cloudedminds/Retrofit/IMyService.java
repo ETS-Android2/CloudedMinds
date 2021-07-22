@@ -4,6 +4,7 @@ import io.reactivex.Observable;
 
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface IMyService {
@@ -20,4 +21,5 @@ public interface IMyService {
                                  @Field("mind_reading") String ming_reading,
                                  @Field("changed_mood") String changed_mood,
                                  @Field("changed_rating") Integer changed_rating);
+
 }

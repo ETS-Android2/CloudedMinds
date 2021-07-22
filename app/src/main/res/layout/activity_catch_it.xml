@@ -142,11 +142,11 @@
         android:layout_width="275dp"
         android:layout_height="70dp"
         android:text="NEXT"
-        android:textColor="#000000"
+        android:textColor="@drawable/button_color"
         android:textSize="20sp"
         app:backgroundTint="#C2E1E4"
         app:icon="@drawable/ic_start"
-        app:iconTint="#000000"
+        app:iconTint="@drawable/button_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,7 +162,6 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEvent"
         app:layout_constraintVertical_bias="0.042" />
@@ -176,7 +175,6 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCatch1"
         app:layout_constraintVertical_bias="0.039" />
@@ -205,7 +203,6 @@
         android:textColor="#0A80B6"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
@@ -227,17 +224,19 @@
         app:layout_constraintTop_toBottomOf="@+id/lblEvent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
+    <TextView
         android:id="@+id/txtDate"
         android:layout_width="340dp"
         android:layout_height="75dp"
+        android:background="#EDF2F3"
         android:ems="10"
-        android:hint="DD/MM/YYYY"
+        android:gravity="center|center_horizontal|center_vertical"
         android:inputType="date"
+        android:text="Tap to Enter Date"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblDate"
         app:layout_constraintVertical_bias="0.0" />
