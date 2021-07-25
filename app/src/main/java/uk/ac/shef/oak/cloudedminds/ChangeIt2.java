@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
@@ -48,7 +49,16 @@ public class ChangeIt2 extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                startActivity(new Intent(ChangeIt2.this, MainActivity.class));
+                AlertDialog.Builder alert = new AlertDialog.Builder(ChangeIt2.this);
+                alert.setTitle("Are you sure?");
+                alert.setMessage("You will return to the Main Menu which will cause all your entered data to be removed. Are you sure you wish to do this?");
+                alert.setPositiveButton("YES",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(ChangeIt2.this, MainActivity.class));
+                    }
+                });
+                alert.setNegativeButton("NO", null);
+                alert.show();
             }
         });
 

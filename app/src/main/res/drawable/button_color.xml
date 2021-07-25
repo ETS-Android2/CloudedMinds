@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Based on the tutorial on https://www.youtube.com/watch?v=RJV9Ur-CUpw -->
     <item android:state_pressed="true" android:color="@color/button_focused"></item>
     <item android:state_enabled="true" android:color="@color/main_button"></item>
     <item android:state_enabled="false" android:color="@color/main_button"></item>

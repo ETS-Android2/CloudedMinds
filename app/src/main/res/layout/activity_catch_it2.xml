@@ -60,13 +60,16 @@
                 android:id="@+id/btnHome"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                app:backgroundTint="@drawable/home_button"
+                app:srcCompat="@drawable/home"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="77dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/home" />
+                app:layout_constraintVertical_bias="0.0"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -352,11 +355,11 @@
         android:text="(High)"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnToCheckIt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
         app:layout_constraintTop_toTopOf="@+id/rdGroupMood"
-        app:layout_constraintVertical_bias="0.53999996" />
+        app:layout_constraintVertical_bias="0.94" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
