@@ -11,6 +11,7 @@ exports.insert = function (req, res) {
 
     try {
         let entry = new Entry({
+            user: userData.user,
             event: userData.event,
             date: userData.date,
             mood: userData.mood,
@@ -40,7 +41,7 @@ exports.insert = function (req, res) {
 }
 
 exports.listData = function (req, res) {
-    Entry.find({}, 'event date mood mood_rating catastrophise generalise ignoring self_critical mind_reading changed_mood changed_rating', function (err, entries) {
+    Entry.find({}, 'user event date mood mood_rating catastrophise generalise ignoring self_critical mind_reading changed_mood changed_rating', function (err, entries) {
         if (err) {
             return res.send(500, err);
         }

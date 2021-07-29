@@ -76,6 +76,7 @@ public class TheEnd extends AppCompatActivity {
         TextView receiveMind = findViewById(R.id.mindReceive7);
         TextView receiveChangedMood = findViewById(R.id.changedmoodReceive5);
         TextView receiveChangedRate = findViewById(R.id.changedrateReceive5);
+        TextView receiveUser = findViewById(R.id.receiveUser16);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event13_txt");
@@ -89,7 +90,9 @@ public class TheEnd extends AppCompatActivity {
         String receivedMind = intent.getStringExtra("mind7_txt");
         String receivedChangedMood = intent.getStringExtra("cmood5_txt");
         String receivedChangedRate = intent.getStringExtra("crating5_txt");
+        String receivedUser = intent.getStringExtra("username16");
 
+        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);
@@ -111,7 +114,7 @@ public class TheEnd extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                dataEntry(receiveEvent.getText().toString(), receiveDate.getText().toString(), receiveMood.getText().toString(),
+                dataEntry(receiveUser.getText().toString(), receiveEvent.getText().toString(), receiveDate.getText().toString(), receiveMood.getText().toString(),
                         Integer.parseInt(receiveRating.getText().toString()), receiveCatas.getText().toString(), receiveGene.getText().toString(),
                         receiveIgnore.getText().toString(), receiveCritical.getText().toString(), receiveMind.getText().toString(),
                         receiveChangedMood.getText().toString(), Integer.parseInt(receiveChangedRate.getText().toString()));
@@ -122,8 +125,8 @@ public class TheEnd extends AppCompatActivity {
 
     }
 
-    private void dataEntry(String event, String date, String mood, Integer rating, String catastrophise, String generalise, String ignore, String critical, String mind, String changedMood, Integer changedRate){
-        compositeDisposable.add(iMyService.enterData(event, date, mood, rating, catastrophise, generalise, ignore, critical, mind, changedMood, changedRate)
+    private void dataEntry(String user, String event, String date, String mood, Integer rating, String catastrophise, String generalise, String ignore, String critical, String mind, String changedMood, Integer changedRate){
+        compositeDisposable.add(iMyService.enterData(user, event, date, mood, rating, catastrophise, generalise, ignore, critical, mind, changedMood, changedRate)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(new Consumer<String>() {

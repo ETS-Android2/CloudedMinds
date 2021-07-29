@@ -3,6 +3,7 @@ let Schema = mongoose.Schema;
 
 let Entry = new Schema(
     {
+        user: {type: String},
         event: {type: String},
         date: {type: String},
         mood: {type: String},

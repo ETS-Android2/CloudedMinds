@@ -68,6 +68,7 @@ public class ChangeIt extends AppCompatActivity {
         TextView receiveIgnore = findViewById(R.id.ignoreReceive3);
         TextView receiveCritical = findViewById(R.id.criticalReceive2);
         TextView receiveMind = findViewById(R.id.mindReceive);
+        TextView receiveUser = findViewById(R.id.receiveUser10);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event7_txt");
@@ -79,7 +80,10 @@ public class ChangeIt extends AppCompatActivity {
         String receivedIgnore = intent.getStringExtra("ignored3_txt");
         String receivedCritical = intent.getStringExtra("critical2_txt");
         String receivedMind = intent.getStringExtra("mind_txt");
+        String receivedUser = intent.getStringExtra("username10");
 
+
+        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);
@@ -116,6 +120,7 @@ public class ChangeIt extends AppCompatActivity {
                 intent.putExtra("ignored4_txt", txtIgnore);
                 intent.putExtra("critical3_txt", txtCritical);
                 intent.putExtra("mind2_txt", txtMind);
+                intent.putExtra("username11", receiveUser.getText().toString());
                 startActivity(intent);
             }
         });

@@ -63,6 +63,7 @@ public class CheckIt3 extends AppCompatActivity {
         TextView receiveRating = findViewById(R.id.ratingReceive3);
         TextView receiveCatas = findViewById(R.id.catasReceive2);
         TextView receiveGene = findViewById(R.id.geneReceive);
+        TextView receiveUser = findViewById(R.id.receiveUser7);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event4_txt");
@@ -71,7 +72,9 @@ public class CheckIt3 extends AppCompatActivity {
         String receivedRating = intent.getStringExtra("rating3_txt");
         String receivedCatas = intent.getStringExtra("catastrophised2_txt");
         String receivedGene = intent.getStringExtra("generalised_txt");
+        String receivedUser = intent.getStringExtra("username7");
 
+        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);
@@ -103,6 +106,7 @@ public class CheckIt3 extends AppCompatActivity {
                 intent.putExtra("catastrophised3_txt", txtCatas);
                 intent.putExtra("generalised2_txt", txtGene);
                 intent.putExtra("ignored_txt", txtIgnore);
+                intent.putExtra("username8", receiveUser.getText().toString());
                 startActivity(intent);
             }
         });

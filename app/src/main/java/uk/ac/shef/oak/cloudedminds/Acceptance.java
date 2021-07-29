@@ -70,6 +70,7 @@ public class Acceptance extends AppCompatActivity {
         TextView receiveMind = findViewById(R.id.mindReceive6);
         TextView receiveChangedMood = findViewById(R.id.changedmoodReceive4);
         TextView receiveChangedRate = findViewById(R.id.changedrateReceive4);
+        TextView receiveUser = findViewById(R.id.receiveUser15);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event12_txt");
@@ -83,7 +84,9 @@ public class Acceptance extends AppCompatActivity {
         String receivedMind = intent.getStringExtra("mind6_txt");
         String receivedChangedMood = intent.getStringExtra("cmood4_txt");
         String receivedChangedRate = intent.getStringExtra("crating4_txt");
+        String receivedUser = intent.getStringExtra("username14");
 
+        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);
@@ -126,6 +129,7 @@ public class Acceptance extends AppCompatActivity {
                 intent.putExtra("mind7_txt", txtMind);
                 intent.putExtra("cmood5_txt", txtChangedMood);
                 intent.putExtra("crating5_txt", txtChangedRating);
+                intent.putExtra("username16", receiveUser.getText().toString());
                 startActivity(intent);
             }
         });

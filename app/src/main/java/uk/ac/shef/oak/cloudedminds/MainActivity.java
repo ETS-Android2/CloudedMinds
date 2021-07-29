@@ -12,6 +12,7 @@ import android.os.Vibrator;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
         final Vibrator vibe = (Vibrator) MainActivity.this.getSystemService(Context.VIBRATOR_SERVICE);
 
+        TextView receiveUser = findViewById(R.id.receiveUser);
+
+        Intent intent = getIntent();
+        String receivedUser = intent.getStringExtra("username");
+        receiveUser.setText(receivedUser);
+
         Button start = findViewById(R.id.btnStart);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                startActivity(new Intent(MainActivity.this, IntroScreen.class));
+                Intent intent = new Intent(getApplicationContext(), IntroScreen.class);
+                intent.putExtra("username2", receiveUser.getText().toString());
+                startActivity(intent);
             }
         });
 

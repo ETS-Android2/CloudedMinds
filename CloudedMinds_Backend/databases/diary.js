@@ -10,6 +10,7 @@ try {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         checkServerIdentity: false,
+        useCreateIndex:true
     });
     console.log('connection to mongodb worked!');
 } catch (e) {
