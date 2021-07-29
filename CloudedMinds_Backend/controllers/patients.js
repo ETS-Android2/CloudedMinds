@@ -80,10 +80,6 @@ exports.loginPatient = function (req, res) {
                 else {
                     res.json('Password is incorrect');
                     console.log('Password is incorrect');
-                    return res.status(401).send({
-                        accessToken: null,
-                        message: "Invalid Password!"
-                    });
                 }
             })
         }
