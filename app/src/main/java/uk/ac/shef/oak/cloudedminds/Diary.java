@@ -81,7 +81,7 @@ public class Diary extends AppCompatActivity {
                     content += "Self-Critical: " + entry.getSelf_critical() + "\n";
                     content += "Mind Read: " + entry.getMind_reading() + "\n";
                     content += "Changed Mood: " + entry.getChanged_mood() + "\n";
-                    content += "Changed Rating: " + entry.getChanged_rating() + "\n";
+                    content += "Changed Rating: " + entry.getChanged_rating() + "\n\n\n";
 
                     listEntries.append(content);
 
