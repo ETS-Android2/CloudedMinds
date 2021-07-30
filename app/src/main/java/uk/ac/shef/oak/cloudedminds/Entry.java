@@ -2,6 +2,7 @@ package uk.ac.shef.oak.cloudedminds;
 
 public class Entry {
 
+    private String user;
     private String event;
     private String date;
     private String mood;
@@ -13,6 +14,10 @@ public class Entry {
     private String mind_reading;
     private String changed_mood;
     private int changed_rating;
+
+    public String getUser(){
+        return user;
+    }
 
     public String getEvent(){
         return event;

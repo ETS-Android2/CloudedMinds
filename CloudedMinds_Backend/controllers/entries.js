@@ -50,3 +50,14 @@ exports.listData = function (req, res) {
         });
     });
 }
+
+exports.listJsonData = function (req, res) {
+    Entry.find({}, 'user event date mood mood_rating catastrophise generalise ignoring self_critical mind_reading changed_mood changed_rating', function (err, values) {
+        if (err) {
+            return res.send(500, err);
+        }
+
+        res.json(values);
+    });
+}
+

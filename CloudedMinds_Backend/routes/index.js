@@ -9,6 +9,11 @@ router.get('/', function(req, res, next) {
   entry.listData(req,res);
 });
 
+/* GET home page. */
+router.get('/entries', function(req, res, next) {
+  entry.listJsonData(req,res);
+});
+
 router.post('/', function (req, res){
 
   entry.insert(req, res);

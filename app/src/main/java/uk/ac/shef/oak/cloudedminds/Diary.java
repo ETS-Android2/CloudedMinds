@@ -12,6 +12,10 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.List;
 
@@ -48,9 +52,56 @@ public class Diary extends AppCompatActivity {
 
         listEntries = findViewById(R.id.listEntries);
 
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl("http://192.168.0.18:3000/")
+                .addConverterFactory(GsonConverterFactory.create());
+
+        Retrofit retrofit = builder.build();
+
+        IMyService iMyService = retrofit.create(IMyService.class);
+        Call<List<Entry>> call = iMyService.getEntries();
+
+        call.enqueue(new Callback<List<Entry>>() {
+            @Override
+            public void onResponse(Call<List<Entry>> call, Response<List<Entry>> response) {
+                List<Entry> entries = response.body();
+
+
+
+
+                for (Entry entry : entries) {
+                    String content = "";
+                    content += "Event: " + entry.getEvent() + "\n";
+                    content += "Date: " + entry.getDate() + "\n";
+                    content += "Mood: " + entry.getMood() + "\n";
+                    content += "Mood Rating: " + entry.getMood_rating() + "\n";
+                    content += "Catastrophised: " + entry.getCatastrophise() + "\n";
+                    content += "Generalised: " + entry.getGeneralise() + "\n";
+                    content += "Ignored the Positive: " + entry.getIgnoring() + "\n";
+                    content += "Self-Critical: " + entry.getSelf_critical() + "\n";
+                    content += "Mind Read: " + entry.getMind_reading() + "\n";
+                    content += "Changed Mood: " + entry.getChanged_mood() + "\n";
+                    content += "Changed Rating: " + entry.getChanged_rating() + "\n";
+
+                    listEntries.append(content);
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Entry>> call, Throwable t) {
+                listEntries.setText(t.getMessage());
+            }
+        });
+
+
+        /*Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://192.168.0.18:3000/")
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
 
@@ -91,6 +142,6 @@ public class Diary extends AppCompatActivity {
             public void onFailure(Call<List<Entry>> call, Throwable t) {
                 listEntries.setText(t.getMessage());
             }
-        });
+        });*/
     }
 }
