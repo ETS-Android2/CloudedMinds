@@ -26,17 +26,21 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import uk.ac.shef.oak.cloudedminds.Retrofit.IMyService;
+import uk.ac.shef.oak.cloudedminds.Session.SessionManager;
 
 public class Diary extends AppCompatActivity {
 
     private MediaPlayer mp;
     private TextView listEntries;
 
+    SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary);
         final Vibrator vibe = (Vibrator) Diary.this.getSystemService(Context.VIBRATOR_SERVICE);
+        sessionManager = new SessionManager(getApplicationContext());
 
         ImageView home = findViewById(R.id.btnHome);
         home.setOnClickListener(new View.OnClickListener() {
@@ -65,9 +69,6 @@ public class Diary extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Entry>> call, Response<List<Entry>> response) {
                 List<Entry> entries = response.body();
-
-
-
 
                 for (Entry entry : entries) {
                     String content = "";

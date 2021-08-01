@@ -12,4 +12,5 @@
     <color name="button_selected">#EDF2F3</color>
     <color name="button_menu">#EDF0F1</color>
     <color name="home_button">#C2E1E4</color>
+    <color name="red">#FF0000</color>
 </resources>

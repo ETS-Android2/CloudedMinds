@@ -14,8 +14,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import uk.ac.shef.oak.cloudedminds.Session.SessionManager;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    SessionManager sessionManager;
 
     private MediaPlayer mp;
 
@@ -24,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sessionManager = new SessionManager(getApplicationContext());
+        sessionManager.checkLogin();
 
         final Vibrator vibe = (Vibrator) MainActivity.this.getSystemService(Context.VIBRATOR_SERVICE);
 
@@ -59,36 +66,6 @@ public class MainActivity extends AppCompatActivity {
                     // When the user releases the Button
                     case MotionEvent.ACTION_UP:
                         start.setTypeface(Typeface.DEFAULT);
-                        break;
-                }
-                return false;
-            }
-        });
-
-        Button settings = findViewById(R.id.btnSettings);
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
-                mp.start();
-                vibe.vibrate(80);
-                startActivity(new Intent(MainActivity.this, Settings.class));
-            }
-        });
-
-        settings.setOnTouchListener(new View.OnTouchListener(){
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                switch (event.getAction()) {
-                    // When the user clicks the Button
-                    case MotionEvent.ACTION_DOWN:
-                        settings.setTypeface(Typeface.DEFAULT_BOLD);
-                        break;
-
-                    // When the user releases the Button
-                    case MotionEvent.ACTION_UP:
-                        settings.setTypeface(Typeface.DEFAULT);
                         break;
                 }
                 return false;
@@ -149,6 +126,36 @@ public class MainActivity extends AppCompatActivity {
                     // When the user releases the Button
                     case MotionEvent.ACTION_UP:
                         diary.setTypeface(Typeface.DEFAULT);
+                        break;
+                }
+                return false;
+            }
+        });
+
+        Button logout = findViewById(R.id.btnLogout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
+                mp.start();
+                vibe.vibrate(80);
+                sessionManager.logoutUser();
+            }
+        });
+
+        logout.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    // When the user clicks the Button
+                    case MotionEvent.ACTION_DOWN:
+                        logout.setTypeface(Typeface.DEFAULT_BOLD);
+                        break;
+
+                    // When the user releases the Button
+                    case MotionEvent.ACTION_UP:
+                        logout.setTypeface(Typeface.DEFAULT);
                         break;
                 }
                 return false;

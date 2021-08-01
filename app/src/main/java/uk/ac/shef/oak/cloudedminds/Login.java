@@ -24,6 +24,7 @@ import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import uk.ac.shef.oak.cloudedminds.Retrofit.IMyService;
 import uk.ac.shef.oak.cloudedminds.Retrofit.RetrofitClient;
+import uk.ac.shef.oak.cloudedminds.Session.SessionManager;
 
 public class Login extends AppCompatActivity {
 
@@ -33,6 +34,7 @@ public class Login extends AppCompatActivity {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     IMyService iMyService;
 
+    SessionManager sessionManager;
     @Override
     protected void onStop(){
         compositeDisposable.clear();
@@ -43,6 +45,8 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        sessionManager = new SessionManager(getApplicationContext());
 
         final Vibrator vibe = (Vibrator) Login.this.getSystemService(Context.VIBRATOR_SERVICE);
 
@@ -119,6 +123,7 @@ public class Login extends AppCompatActivity {
                      Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                      intent.putExtra("username", editUsername.getText().toString());
                      startActivity(intent);
+                     sessionManager.createLoginSession(username, password);
                  }
              }
          }));

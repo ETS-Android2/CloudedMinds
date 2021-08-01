@@ -10,6 +10,8 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 
+import uk.ac.shef.oak.cloudedminds.Session.SessionManager;
+
 public class Start extends AppCompatActivity {
 
     private MediaPlayer mp;
@@ -28,7 +30,7 @@ public class Start extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                startActivity(new Intent(Start.this, Login.class));
+                startActivity(new Intent(Start.this, MainActivity.class));
             }
         });
     }
