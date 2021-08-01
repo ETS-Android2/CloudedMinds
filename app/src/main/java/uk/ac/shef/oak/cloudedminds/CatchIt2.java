@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -30,8 +31,6 @@ public class CatchIt2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catch_it2);
         final Vibrator vibe = (Vibrator) CatchIt2.this.getSystemService(Context.VIBRATOR_SERVICE);
-        TextView eventReceive = findViewById(R.id.txtEventReceive);
-        TextView dateReceive = findViewById(R.id.txtDateReceive);
         EditText mood = findViewById(R.id.txtMood);
         RadioGroup moodrating = findViewById(R.id.rdGroupMood);
 
@@ -55,16 +54,6 @@ public class CatchIt2 extends AppCompatActivity {
             }
         });
 
-        TextView receiveEvent = findViewById(R.id.txtEventReceive);
-        TextView receiveDate = findViewById(R.id.txtDateReceive);
-
-        Intent intent = getIntent();
-        String receivedEvent = intent.getStringExtra("event_txt");
-        String receivedDate = intent.getStringExtra("date_txt");
-        String receivedUser = intent.getStringExtra("username4");
-        receiveEvent.setText(receivedEvent);
-        receiveDate.setText(receivedDate);
-
         Button checkit = findViewById(R.id.btnToCheckIt);
         checkit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,8 +61,7 @@ public class CatchIt2 extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                String txtEventReceive = eventReceive.getText().toString();
-                String txtDateReceive = dateReceive.getText().toString();
+
                 String txtMood = mood.getText().toString();
                 int selectedId = moodrating.getCheckedRadioButtonId();
                 RadioButton moodRate = findViewById(selectedId);
@@ -94,12 +82,13 @@ public class CatchIt2 extends AppCompatActivity {
                     alert.show();
                 }
                 else {
-                    Intent intent = new Intent(getApplicationContext(), CheckIt.class);
-                    intent.putExtra("event2_txt", txtEventReceive);
-                    intent.putExtra("date2_txt", txtDateReceive);
-                    intent.putExtra("mood_txt", txtMood);
-                    intent.putExtra("rating_txt", txtRating);
-                    startActivity(intent);
+                    SharedPreferences sharedPref = getSharedPreferences("ENTRIES", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putString("mood", mood.getText().toString());
+                    editor.putString("rating", txtRating);
+                    editor.apply();
+
+                    startActivity(new Intent(getApplicationContext(), CheckIt.class));
                 }
             }
         });

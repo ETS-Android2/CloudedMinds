@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".CatchIt2">
 
-    <TextView
-        android:id="@+id/txtEventReceive"
-        android:layout_width="105dp"
-        android:layout_height="35dp"
-        android:text="Some text"
-        android:textColor="#000000"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.297"
-        app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
-        app:layout_constraintTop_toTopOf="@+id/rdGroupMood"
-        app:layout_constraintVertical_bias="0.165" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
@@ -319,20 +305,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rdGroupMood"
         app:layout_constraintVertical_bias="0.050000012" />
-
-    <TextView
-        android:id="@+id/txtDateReceive"
-        android:layout_width="105dp"
-        android:layout_height="35dp"
-        android:text="Some text"
-        android:textColor="#000000"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
-        app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
-        app:layout_constraintTop_toBottomOf="@+id/txtEventReceive"
-        app:layout_constraintVertical_bias="0.028" />
 
     <TextView
         android:id="@+id/textView2"

@@ -8,6 +8,7 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
@@ -39,7 +40,6 @@ public class CatchIt extends AppCompatActivity {
         final Vibrator vibe = (Vibrator) CatchIt.this.getSystemService(Context.VIBRATOR_SERVICE);
         EditText event = findViewById(R.id.txtEvent);
         TextView dateText = findViewById(R.id.txtDate);
-
 
         ImageView home = findViewById(R.id.btnHome);
         home.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +109,7 @@ public class CatchIt extends AppCompatActivity {
                     alert.setPositiveButton("OK",null);
                     alert.show();
                 }
-                else if(txtDate.isEmpty()){
+                else if(txtDate.equals("Tap to Enter Date")){
                     AlertDialog.Builder alert = new AlertDialog.Builder(CatchIt.this);
                     alert.setTitle("Empty Date");
                     alert.setMessage("Please enter the date of this event.");
@@ -117,10 +117,13 @@ public class CatchIt extends AppCompatActivity {
                     alert.show();
                 }
                 else {
-                    Intent intent = new Intent(getApplicationContext(), CatchIt2.class);
-                    intent.putExtra("event_txt", txtEvent);
-                    intent.putExtra("date_txt", txtDate);
-                    startActivity(intent);
+                    SharedPreferences sharedPref = getSharedPreferences("ENTRIES", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putString("event", event.getText().toString());
+                    editor.putString("date", dateText.getText().toString());
+                    editor.apply();
+
+                    startActivity(new Intent(CatchIt.this, CatchIt2.class));
                 }
             }
         });

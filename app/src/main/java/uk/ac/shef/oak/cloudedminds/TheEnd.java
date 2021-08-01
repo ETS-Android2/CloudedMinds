@@ -76,43 +76,18 @@ public class TheEnd extends AppCompatActivity {
             }
         });
 
-        TextView receiveEvent = findViewById(R.id.eventReceive13);
-        TextView receiveDate = findViewById(R.id.dateReceive13);
-        TextView receiveMood = findViewById(R.id.moodReceive12);
-        TextView receiveRating = findViewById(R.id.ratingReceive12);
-        TextView receiveCatas = findViewById(R.id.catasReceive11);
-        TextView receiveGene = findViewById(R.id.geneReceive10);
-        TextView receiveIgnore = findViewById(R.id.ignoreReceive9);
-        TextView receiveCritical = findViewById(R.id.criticalReceive8);
-        TextView receiveMind = findViewById(R.id.mindReceive7);
-        TextView receiveChangedMood = findViewById(R.id.changedmoodReceive5);
-        TextView receiveChangedRate = findViewById(R.id.changedrateReceive5);
-
-        Intent intent = getIntent();
-        String receivedEvent = intent.getStringExtra("event13_txt");
-        String receivedDate = intent.getStringExtra("date13_txt");
-        String receivedMood = intent.getStringExtra("mood12_txt");
-        String receivedRating = intent.getStringExtra("rating12_txt");
-        String receivedCatas = intent.getStringExtra("catastrophised11_txt");
-        String receivedGene = intent.getStringExtra("generalised10_txt");
-        String receivedIgnore = intent.getStringExtra("ignored9_txt");
-        String receivedCritical = intent.getStringExtra("critical8_txt");
-        String receivedMind = intent.getStringExtra("mind7_txt");
-        String receivedChangedMood = intent.getStringExtra("cmood5_txt");
-        String receivedChangedRate = intent.getStringExtra("crating5_txt");
-
-        receiveEvent.setText(receivedEvent);
-        receiveDate.setText(receivedDate);
-        receiveMood.setText(receivedMood);
-        receiveRating.setText(receivedRating);
-        receiveCatas.setText(receivedCatas);
-        receiveGene.setText(receivedGene);
-        receiveIgnore.setText(receivedIgnore);
-        receiveCritical.setText(receivedCritical);
-        receiveMind.setText(receivedMind);
-        receiveChangedMood.setText(receivedChangedMood);
-        receiveChangedRate.setText(receivedChangedRate);
-
+        SharedPreferences sharedPreferences = getSharedPreferences("ENTRIES", MODE_PRIVATE);
+        String event = sharedPreferences.getString("event","");
+        String date = sharedPreferences.getString("date", "");
+        String mood = sharedPreferences.getString("mood","");
+        Integer rating = Integer.parseInt(sharedPreferences.getString("rating", ""));
+        String catastrophise = sharedPreferences.getString("catastrophised","");
+        String generalised = sharedPreferences.getString("generalised", "");
+        String ignored = sharedPreferences.getString("ignored","");
+        String critical = sharedPreferences.getString("critical", "");
+        String mind = sharedPreferences.getString("mind","");
+        String changedMood = sharedPreferences.getString("changedmood", "");
+        Integer changedRating = Integer.parseInt(sharedPreferences.getString("changedrating",""));
 
 
         Button end = findViewById(R.id.btnFinish);
@@ -122,12 +97,10 @@ public class TheEnd extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                dataEntry(username, receiveEvent.getText().toString(), receiveDate.getText().toString(), receiveMood.getText().toString(),
-                        Integer.parseInt(receiveRating.getText().toString()), receiveCatas.getText().toString(), receiveGene.getText().toString(),
-                        receiveIgnore.getText().toString(), receiveCritical.getText().toString(), receiveMind.getText().toString(),
-                        receiveChangedMood.getText().toString(), Integer.parseInt(receiveChangedRate.getText().toString()));
-
-                startActivity(new Intent(TheEnd.this, MainActivity.class));
+                dataEntry(username, event, date, mood,
+                        rating, catastrophise, generalised,
+                        ignored, critical, mind,
+                        changedMood, changedRating);
             }
         });
 
@@ -140,7 +113,7 @@ public class TheEnd extends AppCompatActivity {
         .subscribe(new Consumer<String>() {
             @Override
             public void accept(String response) throws Exception {
-                Log.i("myTag", "Data sent to database.");
+                startActivity(new Intent(TheEnd.this, MainActivity.class));
             }
         }));
     }
