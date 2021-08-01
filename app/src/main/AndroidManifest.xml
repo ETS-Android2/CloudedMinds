@@ -26,7 +26,6 @@
         </activity>
         <activity android:name=".Diary" />
         <activity android:name=".About" />
-        <activity android:name=".Settings" />
         <activity android:name=".TheEnd" />
         <activity android:name=".Acceptance" />
         <activity android:name=".Mindfulness2" />

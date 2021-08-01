@@ -59,16 +59,13 @@ public class CheckIt extends AppCompatActivity {
         TextView receiveDate = findViewById(R.id.dateReceive2);
         TextView receiveMood = findViewById(R.id.moodReceive);
         TextView receiveRating = findViewById(R.id.ratingReceive);
-        TextView receiveUser = findViewById(R.id.receiveUser5);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event2_txt");
         String receivedDate = intent.getStringExtra("date2_txt");
         String receivedMood = intent.getStringExtra("mood_txt");
         String receivedRating = intent.getStringExtra("rating_txt");
-        String receivedUser = intent.getStringExtra("username5");
 
-        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);
@@ -94,7 +91,6 @@ public class CheckIt extends AppCompatActivity {
                 intent.putExtra("mood2_txt", txtMood);
                 intent.putExtra("rating2_txt", txtRating);
                 intent.putExtra("catastrophised_txt", txtCatas);
-                intent.putExtra("username6", receiveUser.getText().toString());
                 startActivity(intent);
             }
         });

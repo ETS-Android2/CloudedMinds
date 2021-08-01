@@ -47,8 +47,8 @@
 
     <TextView
         android:id="@+id/lblTitle"
-        android:layout_width="300dp"
-        android:layout_height="53dp"
+        android:layout_width="286dp"
+        android:layout_height="49dp"
         android:fontFamily="@font/baloo"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="CloudedMinds"
@@ -126,23 +126,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAbout"
         app:layout_constraintVertical_bias="0.681" />
-
-    <TextView
-        android:id="@+id/receiveUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        android:fontFamily="@font/baloo"
-        android:gravity="right|center_vertical"
-        android:text="TextView"
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblSubtitle"
-        app:layout_constraintVertical_bias="0.089999974" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

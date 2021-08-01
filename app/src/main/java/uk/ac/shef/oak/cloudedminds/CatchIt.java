@@ -39,11 +39,6 @@ public class CatchIt extends AppCompatActivity {
         final Vibrator vibe = (Vibrator) CatchIt.this.getSystemService(Context.VIBRATOR_SERVICE);
         EditText event = findViewById(R.id.txtEvent);
         TextView dateText = findViewById(R.id.txtDate);
-        TextView receiveUser = findViewById(R.id.receiveUser3);
-
-        Intent intent = getIntent();
-        String receivedUser = intent.getStringExtra("username3");
-        receiveUser.setText(receivedUser);
 
 
         ImageView home = findViewById(R.id.btnHome);
@@ -125,7 +120,6 @@ public class CatchIt extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), CatchIt2.class);
                     intent.putExtra("event_txt", txtEvent);
                     intent.putExtra("date_txt", txtDate);
-                    intent.putExtra("username4", receiveUser.getText().toString());
                     startActivity(intent);
                 }
             }

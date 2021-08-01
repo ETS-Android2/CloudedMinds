@@ -68,7 +68,6 @@ public class CheckIt5 extends AppCompatActivity {
         TextView receiveGene = findViewById(R.id.geneReceive3);
         TextView receiveIgnore = findViewById(R.id.ignoreReceive2);
         TextView receiveCritical = findViewById(R.id.criticalReceive);
-        TextView receiveUser = findViewById(R.id.receiveUser9);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event6_txt");
@@ -79,9 +78,7 @@ public class CheckIt5 extends AppCompatActivity {
         String receivedGene = intent.getStringExtra("generalised3_txt");
         String receivedIgnore = intent.getStringExtra("ignored2_txt");
         String receivedCritical = intent.getStringExtra("critical_txt");
-        String receivedUser = intent.getStringExtra("username9");
 
-        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);
@@ -119,7 +116,6 @@ public class CheckIt5 extends AppCompatActivity {
                 intent.putExtra("ignored3_txt", txtIgnore);
                 intent.putExtra("critical2_txt", txtCritical);
                 intent.putExtra("mind_txt", txtMind);
-                intent.putExtra("username10", receiveUser.getText().toString());
                 startActivity(intent);
             }
         });

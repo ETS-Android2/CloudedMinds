@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -40,7 +41,10 @@ public class Diary extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary);
         final Vibrator vibe = (Vibrator) Diary.this.getSystemService(Context.VIBRATOR_SERVICE);
+
         sessionManager = new SessionManager(getApplicationContext());
+        HashMap<String, String> user = sessionManager.getUserDetails();
+        String username = user.get(SessionManager.USERNAME);
 
         ImageView home = findViewById(R.id.btnHome);
         home.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +75,10 @@ public class Diary extends AppCompatActivity {
                 List<Entry> entries = response.body();
 
                 for (Entry entry : entries) {
+                    if (!entry.getUser().equals(username)) {
+                        continue;
+                    }
+
                     String content = "";
                     content += "Event: " + entry.getEvent() + "\n";
                     content += "Date: " + entry.getDate() + "\n";
@@ -85,7 +93,6 @@ public class Diary extends AppCompatActivity {
                     content += "Changed Rating: " + entry.getChanged_rating() + "\n\n\n";
 
                     listEntries.append(content);
-
                 }
             }
 

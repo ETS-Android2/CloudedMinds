@@ -71,7 +71,6 @@ public class Mindfullness extends AppCompatActivity {
         TextView receiveMind = findViewById(R.id.mindReceive4);
         TextView receiveChangedMood = findViewById(R.id.changedmoodReceive2);
         TextView receiveChangedRate = findViewById(R.id.changedrateReceive2);
-        TextView receiveUser = findViewById(R.id.receiveUser12);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event10_txt");
@@ -85,9 +84,7 @@ public class Mindfullness extends AppCompatActivity {
         String receivedMind = intent.getStringExtra("mind4_txt");
         String receivedChangedMood = intent.getStringExtra("cmood2_txt");
         String receivedChangedRate = intent.getStringExtra("crating2_txt");
-        String receivedUser = intent.getStringExtra("username15");
 
-        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);
@@ -130,7 +127,6 @@ public class Mindfullness extends AppCompatActivity {
                 intent.putExtra("mind5_txt", txtMind);
                 intent.putExtra("cmood3_txt", txtChangedMood);
                 intent.putExtra("crating3_txt", txtChangedRating);
-                intent.putExtra("username13", receiveUser.getText().toString());
                 startActivity(intent);
             }
         });

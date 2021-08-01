@@ -87,7 +87,6 @@ public class TheEnd extends AppCompatActivity {
         TextView receiveMind = findViewById(R.id.mindReceive7);
         TextView receiveChangedMood = findViewById(R.id.changedmoodReceive5);
         TextView receiveChangedRate = findViewById(R.id.changedrateReceive5);
-        TextView receiveUser = findViewById(R.id.receiveUser16);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event13_txt");
@@ -101,9 +100,7 @@ public class TheEnd extends AppCompatActivity {
         String receivedMind = intent.getStringExtra("mind7_txt");
         String receivedChangedMood = intent.getStringExtra("cmood5_txt");
         String receivedChangedRate = intent.getStringExtra("crating5_txt");
-        String receivedUser = intent.getStringExtra("username16");
 
-        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);

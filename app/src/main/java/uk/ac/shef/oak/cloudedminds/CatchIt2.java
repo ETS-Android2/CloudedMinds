@@ -57,13 +57,11 @@ public class CatchIt2 extends AppCompatActivity {
 
         TextView receiveEvent = findViewById(R.id.txtEventReceive);
         TextView receiveDate = findViewById(R.id.txtDateReceive);
-        TextView receiveUser = findViewById(R.id.receiveUser4);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event_txt");
         String receivedDate = intent.getStringExtra("date_txt");
         String receivedUser = intent.getStringExtra("username4");
-        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
 
@@ -101,7 +99,6 @@ public class CatchIt2 extends AppCompatActivity {
                     intent.putExtra("date2_txt", txtDateReceive);
                     intent.putExtra("mood_txt", txtMood);
                     intent.putExtra("rating_txt", txtRating);
-                    intent.putExtra("username5", receiveUser.getText().toString());
                     startActivity(intent);
                 }
             }

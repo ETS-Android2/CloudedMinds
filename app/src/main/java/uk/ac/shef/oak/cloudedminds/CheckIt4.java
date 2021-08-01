@@ -65,7 +65,6 @@ public class CheckIt4 extends AppCompatActivity {
         TextView receiveCatas = findViewById(R.id.catasReceive3);
         TextView receiveGene = findViewById(R.id.geneReceive2);
         TextView receiveIgnore = findViewById(R.id.ignoreReceive);
-        TextView receiveUser = findViewById(R.id.receiveUser8);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event5_txt");
@@ -75,9 +74,7 @@ public class CheckIt4 extends AppCompatActivity {
         String receivedCatas = intent.getStringExtra("catastrophised3_txt");
         String receivedGene = intent.getStringExtra("generalised2_txt");
         String receivedIgnore = intent.getStringExtra("ignored_txt");
-        String receivedUser = intent.getStringExtra("username8");
 
-        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);
@@ -112,7 +109,6 @@ public class CheckIt4 extends AppCompatActivity {
                 intent.putExtra("generalised3_txt", txtGene);
                 intent.putExtra("ignored2_txt", txtIgnore);
                 intent.putExtra("critical_txt", txtCritical);
-                intent.putExtra("username9", receiveUser.getText().toString());
                 startActivity(intent);
             }
         });

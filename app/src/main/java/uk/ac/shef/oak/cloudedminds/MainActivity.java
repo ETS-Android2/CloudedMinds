@@ -29,16 +29,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Checks whether the user is logged in, if not, it opens the login screen instead.
         sessionManager = new SessionManager(getApplicationContext());
         sessionManager.checkLogin();
 
         final Vibrator vibe = (Vibrator) MainActivity.this.getSystemService(Context.VIBRATOR_SERVICE);
 
-        TextView receiveUser = findViewById(R.id.receiveUser);
 
-        Intent intent = getIntent();
-        String receivedUser = intent.getStringExtra("username");
-        receiveUser.setText(receivedUser);
 
         Button start = findViewById(R.id.btnStart);
         start.setOnClickListener(new View.OnClickListener() {
@@ -47,9 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                Intent intent = new Intent(getApplicationContext(), IntroScreen.class);
-                intent.putExtra("username2", receiveUser.getText().toString());
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, IntroScreen.class));;
             }
         });
 

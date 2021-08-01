@@ -73,7 +73,6 @@ public class Rumination extends AppCompatActivity {
         TextView receiveMind = findViewById(R.id.mindReceive3);
         TextView receiveChangedMood = findViewById(R.id.changedmoodReceive);
         TextView receiveChangedRate = findViewById(R.id.changedrateReceive);
-        TextView receiveUser = findViewById(R.id.receiveUser14);
 
         Intent intent = getIntent();
         String receivedEvent = intent.getStringExtra("event9_txt");
@@ -87,9 +86,7 @@ public class Rumination extends AppCompatActivity {
         String receivedMind = intent.getStringExtra("mind3_txt");
         String receivedChangedMood = intent.getStringExtra("cmood_txt");
         String receivedChangedRate = intent.getStringExtra("crating_txt");
-        String receivedUser = intent.getStringExtra("username12");
 
-        receiveUser.setText(receivedUser);
         receiveEvent.setText(receivedEvent);
         receiveDate.setText(receivedDate);
         receiveMood.setText(receivedMood);
@@ -133,7 +130,6 @@ public class Rumination extends AppCompatActivity {
                 intent.putExtra("mind4_txt", txtMind);
                 intent.putExtra("cmood2_txt", txtChangedMood);
                 intent.putExtra("crating2_txt", txtChangedRating);
-                intent.putExtra("username15", receiveUser.getText().toString());
                 startActivity(intent);
             }
         });

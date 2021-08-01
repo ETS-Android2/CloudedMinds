@@ -26,11 +26,6 @@ public class IntroScreen extends AppCompatActivity {
         setContentView(R.layout.activity_intro_screen);
         final Vibrator vibe = (Vibrator) IntroScreen.this.getSystemService(Context.VIBRATOR_SERVICE);
 
-        TextView receiveUser = findViewById(R.id.receiveUser2);
-
-        Intent intent = getIntent();
-        String receivedUser = intent.getStringExtra("username2");
-        receiveUser.setText(receivedUser);
 
         ImageView home = findViewById(R.id.btnHome);
         home.setOnClickListener(new View.OnClickListener() {
@@ -50,9 +45,7 @@ public class IntroScreen extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                Intent intent = new Intent(getApplicationContext(), CatchIt.class);
-                intent.putExtra("username3", receiveUser.getText().toString());
-                startActivity(intent);
+                startActivity(new Intent(IntroScreen.this, CatchIt.class));
             }
         });
 
