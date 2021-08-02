@@ -29,6 +29,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import uk.ac.shef.oak.cloudedminds.Retrofit.IMyService;
 import uk.ac.shef.oak.cloudedminds.Session.SessionManager;
 
+/**
+ * This class implements the Diary screen which sends a GET request to the server and retrieves the user
+ * entries to display the entries for the user logged in.
+ *
+ * Based on tutorial by Coding in Flow on Youtube: https://www.youtube.com/watch?v=4JGvDUlfk7Y
+ */
 public class Diary extends AppCompatActivity {
 
     private MediaPlayer mp;
@@ -42,6 +48,7 @@ public class Diary extends AppCompatActivity {
         setContentView(R.layout.activity_diary);
         final Vibrator vibe = (Vibrator) Diary.this.getSystemService(Context.VIBRATOR_SERVICE);
 
+        // Retrieves the username of the logged in user
         sessionManager = new SessionManager(getApplicationContext());
         HashMap<String, String> user = sessionManager.getUserDetails();
         String username = user.get(SessionManager.USERNAME);
@@ -59,7 +66,7 @@ public class Diary extends AppCompatActivity {
         });
 
         listEntries = findViewById(R.id.listEntries);
-
+        // A new builder is created with Gson converter factory
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl("http://192.168.0.18:3000/")
                 .addConverterFactory(GsonConverterFactory.create());
@@ -74,6 +81,8 @@ public class Diary extends AppCompatActivity {
             public void onResponse(Call<List<Entry>> call, Response<List<Entry>> response) {
                 List<Entry> entries = response.body();
 
+                // Loops through each entry in the response and displays the entries while skipping any entry which is not made by the logged in user.
+                // The user sees only the entries they have made.
                 for (Entry entry : entries) {
                     if (!entry.getUser().equals(username)) {
                         continue;

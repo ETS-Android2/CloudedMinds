@@ -21,6 +21,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+/**
+ * This class allows the user to enter the mood and rating which are stored with Shared Preferences
+ * so that it can be retrieved in the end screen for saving.
+ */
+
 public class CatchIt2 extends AppCompatActivity {
 
     private MediaPlayer mp;

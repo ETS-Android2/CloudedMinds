@@ -1,5 +1,9 @@
 package uk.ac.shef.oak.cloudedminds;
 
+/**
+ * This class contains the getters for each item in the entries made by the user. It is used to
+ * retrieve the items in the Diary screen.
+ */
 public class Entry {
 
     private String user;

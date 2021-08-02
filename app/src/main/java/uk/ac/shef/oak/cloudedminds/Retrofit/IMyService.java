@@ -12,6 +12,13 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import uk.ac.shef.oak.cloudedminds.Entry;
 
+/**
+ * This interface implements the GET and POST requests which are sent to the server in order to
+ * retrieve user entries and login details, alongside adding entries into the database.
+ * Based on tutorial by EMDT Dev on Youtube: https://www.youtube.com/watch?v=4Xq2FUJvE-c
+ *
+ * @FormUrlEncoded sets the mime type of the request to application/x-www-form-urlencoded
+ */
 public interface IMyService {
 
     @POST("/")

@@ -14,6 +14,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * This class implements the information screen about the application.
+ */
 public class About extends AppCompatActivity {
 
     private MediaPlayer mp;

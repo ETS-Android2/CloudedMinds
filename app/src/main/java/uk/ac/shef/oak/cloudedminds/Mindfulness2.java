@@ -24,6 +24,10 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+/**
+ * This class implements the information screen for mindfulness which also contains a button to direct the user
+ * to a mindfulness video on YouTube.
+ */
 public class Mindfulness2 extends AppCompatActivity {
 
     private MediaPlayer mp;

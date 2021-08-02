@@ -18,7 +18,9 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-
+/**
+ * This class implements the Change it screen which informs the user of how they can change their thoughts.
+ */
 public class ChangeIt extends AppCompatActivity {
 
     private MediaPlayer mp;

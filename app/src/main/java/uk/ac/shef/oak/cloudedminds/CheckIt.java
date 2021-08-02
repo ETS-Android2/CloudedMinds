@@ -20,6 +20,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+/**
+ * This class allows the user to choose whether they catastrophised which is stored with
+ * Shared Preferences so that it can be retrieved in the end screen for saving.
+ */
 public class CheckIt extends AppCompatActivity {
 
     private MediaPlayer mp;

@@ -17,6 +17,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * This class implements the information screen on acceptance.
+ */
 public class Acceptance extends AppCompatActivity {
 
     private MediaPlayer mp;

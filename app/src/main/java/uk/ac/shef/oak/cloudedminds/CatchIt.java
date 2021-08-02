@@ -27,6 +27,10 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
+/**
+ * This class allows the user to enter the event and date which are stored with Shared Preferences
+ * so that it can be retrieved in the end screen for saving.
+ */
 public class CatchIt extends AppCompatActivity {
 
     private MediaPlayer mp;
@@ -41,6 +45,8 @@ public class CatchIt extends AppCompatActivity {
         EditText event = findViewById(R.id.txtEvent);
         TextView dateText = findViewById(R.id.txtDate);
 
+        /* Button to return to home should the user wish to. A warning given in an alert box stating that
+        any entered data will be removed.*/
         ImageView home = findViewById(R.id.btnHome);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +68,7 @@ public class CatchIt extends AppCompatActivity {
             }
         });
 
+        // Tapping on entry text for date opens the date picker in which the user can select the date.
         dateText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +98,9 @@ public class CatchIt extends AppCompatActivity {
             }
         };
 
+        /* Button which checks if any entry fields are empty, if not, it stores the event and date in
+            shared preferences and moves to the next screen. Displays error alert boxes if fields are empty.
+         */
         Button next = findViewById(R.id.btnNextCatchIt);
         next.setOnClickListener(new View.OnClickListener() {
             @Override

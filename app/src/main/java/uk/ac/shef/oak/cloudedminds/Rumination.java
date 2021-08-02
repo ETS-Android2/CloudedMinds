@@ -20,6 +20,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+/**
+ * This class implements the information screen for rumination.
+ */
 public class Rumination extends AppCompatActivity {
 
     private MediaPlayer mp;

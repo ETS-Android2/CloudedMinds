@@ -15,6 +15,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * This class implements the introduction screen which sets the scene for the mood entry session.
+ */
 public class IntroScreen extends AppCompatActivity {
 
     private MediaPlayer mp;

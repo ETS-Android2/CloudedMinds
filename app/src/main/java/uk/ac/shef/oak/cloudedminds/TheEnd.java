@@ -28,6 +28,12 @@ import uk.ac.shef.oak.cloudedminds.Retrofit.IMyService;
 import uk.ac.shef.oak.cloudedminds.Retrofit.RetrofitClient;
 import uk.ac.shef.oak.cloudedminds.Session.SessionManager;
 
+/**
+ * This class retrieves all the entered data of the user from the previous
+ * screens and saves them in the database.
+ *
+ * Part of saving data based on tutorial by EMDT Dev on YouTube: https://www.youtube.com/watch?v=4Xq2FUJvE-c
+ */
 public class TheEnd extends AppCompatActivity {
 
     private MediaPlayer mp;
@@ -47,12 +53,16 @@ public class TheEnd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_the_end);
+
+        // Initiates vibrator
         final Vibrator vibe = (Vibrator) TheEnd.this.getSystemService(Context.VIBRATOR_SERVICE);
 
+        // Retrieves the username of the currently logged in user from session manager
         sessionManager = new SessionManager(getApplicationContext());
         HashMap<String, String> user = sessionManager.getUserDetails();
         String username = user.get(SessionManager.USERNAME);
 
+        // Initialises retrofit client
         Retrofit retrofitClient = RetrofitClient.getInstance();
         iMyService = retrofitClient.create(IMyService.class);
 
@@ -76,6 +86,7 @@ public class TheEnd extends AppCompatActivity {
             }
         });
 
+        // Retrieves previously entered data through the use of Shared Preferences.
         SharedPreferences sharedPreferences = getSharedPreferences("ENTRIES", MODE_PRIVATE);
         String event = sharedPreferences.getString("event","");
         String date = sharedPreferences.getString("date", "");
@@ -89,7 +100,7 @@ public class TheEnd extends AppCompatActivity {
         String changedMood = sharedPreferences.getString("changedmood", "");
         Integer changedRating = Integer.parseInt(sharedPreferences.getString("changedrating",""));
 
-
+        // Button to save users entered mood details into the database
         Button end = findViewById(R.id.btnFinish);
         end.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +117,23 @@ public class TheEnd extends AppCompatActivity {
 
     }
 
+    /**
+     * Posts the data entered by the user in the previous screens into the entries database.
+     * Once the data is entered, the user is taken back to the main menu screen.
+     *
+     * @param user
+     * @param event
+     * @param date
+     * @param mood
+     * @param rating
+     * @param catastrophise
+     * @param generalise
+     * @param ignore
+     * @param critical
+     * @param mind
+     * @param changedMood
+     * @param changedRate
+     */
     private void dataEntry(String user, String event, String date, String mood, Integer rating, String catastrophise, String generalise, String ignore, String critical, String mind, String changedMood, Integer changedRate){
         compositeDisposable.add(iMyService.enterData(user, event, date, mood, rating, catastrophise, generalise, ignore, critical, mind, changedMood, changedRate)
         .subscribeOn(Schedulers.io())

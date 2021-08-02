@@ -133,7 +133,7 @@
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/editPassword"
-        android:layout_width="317dp"
+        android:layout_width="240dp"
         android:layout_height="70dp"
         android:ems="10"
         android:hint="Enter your Password"
@@ -141,8 +141,23 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editUsername"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintVertical_bias="0.055" />
+
+    <Button
+        android:id="@+id/btnShowPassword"
+        android:layout_width="78dp"
+        android:layout_height="70dp"
+        android:text="Show"
+        android:textColor="@drawable/button_color"
+        app:backgroundTint="#C2E1E4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editPassword"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        app:layout_constraintVertical_bias="0.405" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

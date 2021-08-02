@@ -16,7 +16,11 @@ import android.widget.TextView;
 
 import uk.ac.shef.oak.cloudedminds.Session.SessionManager;
 
-
+/**
+ * This class is for the main menu screen and displays buttons which navigate users to
+ * specific screens on the app. The user gets access to this screen only when they are
+ * logged in and can logout on this screen to end session.
+ */
 public class MainActivity extends AppCompatActivity {
 
     SessionManager sessionManager;
@@ -28,15 +32,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final Vibrator vibe = (Vibrator) MainActivity.this.getSystemService(Context.VIBRATOR_SERVICE);
 
         // Checks whether the user is logged in, if not, it opens the login screen instead.
         sessionManager = new SessionManager(getApplicationContext());
         sessionManager.checkLogin();
 
-        final Vibrator vibe = (Vibrator) MainActivity.this.getSystemService(Context.VIBRATOR_SERVICE);
+        // If the user is not logged in, it ends the main menu activity so the user cannot press the back button and access it.
+        if(sessionManager.isLoggedIn() == false){
+            finish();
+        }
 
-
-
+        // Button to take the user to the mood entry session screens
         Button start = findViewById(R.id.btnStart);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Button to take the user to the about screen
         Button about = findViewById(R.id.btnAbout);
         about.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Button to take the user to the diary screen
         Button diary = findViewById(R.id.btnDiary);
         diary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Button to logout user, ending the user session and returning the user to the login screen
         Button logout = findViewById(R.id.btnLogout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

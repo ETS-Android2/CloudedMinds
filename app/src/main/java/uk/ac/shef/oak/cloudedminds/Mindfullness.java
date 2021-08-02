@@ -17,6 +17,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * This class implements the information screen about mindfulness.
+ */
 public class Mindfullness extends AppCompatActivity {
 
     private MediaPlayer mp;
