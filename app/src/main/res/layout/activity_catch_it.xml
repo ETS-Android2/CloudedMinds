@@ -173,7 +173,7 @@
         android:id="@+id/lblEvent"
         android:layout_width="340dp"
         android:layout_height="46dp"
-        android:text="What is the event that made you feel strong emotions?"
+        android:text="What is the event that made you feel strong negative emotions?"
         android:textColor="#0C4863"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -25,9 +25,9 @@
     <TextView
         android:id="@+id/textView16"
         android:layout_width="340dp"
-        android:layout_height="90dp"
+        android:layout_height="66dp"
         android:justificationMode="inter_word"
-        android:text="The thought: &quot;I'm no good at my job&quot;, could be balanced with: &quot;my boss said how much he appreciated the piece of work I did yesterday&quot;."
+        android:text="The thought: &quot;No one likes me&quot;, could be balanced with: &quot;I have many friends and family who support me&quot;."
         android:textColor="#0C4863"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,6 +35,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
         app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="340dp"
+        android:layout_height="66dp"
+        android:justificationMode="inter_word"
+        android:text="Take a moment now to consider your negative thought and try to find a positive statement to balance it with."
+        android:textColor="#0C4863"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.082" />
 
     <TextView
         android:id="@+id/textView15"

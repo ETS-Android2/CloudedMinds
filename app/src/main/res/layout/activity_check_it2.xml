@@ -60,7 +60,7 @@
         android:layout_height="30dp"
         android:gravity="center_horizontal|center_vertical"
         android:justificationMode="inter_word"
-        android:text="Take a moment to consider your worry."
+        android:text="Take a moment to consider your worries."
         android:textColor="#0C4863"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

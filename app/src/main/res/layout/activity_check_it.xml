@@ -17,10 +17,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCheck3"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintVertical_bias="0.085" />
 
     <TextView
         android:id="@+id/txtCatastrophising"
@@ -55,9 +54,9 @@
     <TextView
         android:id="@+id/txtCheck3"
         android:layout_width="340dp"
-        android:layout_height="50dp"
+        android:layout_height="66dp"
         android:justificationMode="inter_word"
-        android:text="For example, you make a small mistake at work and fear that you may be dismissed."
+        android:text="For example, after experiencing consitent headaches over a week, you believe you are suffering from a brain tumour."
         android:textColor="#0C4863"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,7 +72,7 @@
         android:layout_height="30dp"
         android:gravity="center_horizontal|center_vertical"
         android:justificationMode="inter_word"
-        android:text="Take a moment to consider your worry."
+        android:text="Take a moment to consider your worries."
         android:textColor="#0C4863"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -97,7 +96,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rdgCatastrophising"
-        app:layout_constraintVertical_bias="0.485" />
+        app:layout_constraintVertical_bias="0.49" />
 
     <TextView
         android:id="@+id/txtCheckThoseWorries"

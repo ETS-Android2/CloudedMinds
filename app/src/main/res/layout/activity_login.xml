@@ -152,7 +152,7 @@
         android:layout_height="70dp"
         android:text="Show"
         android:textColor="@drawable/button_color"
-        app:backgroundTint="#C2E1E4"
+        app:backgroundTint="#C1C6C6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

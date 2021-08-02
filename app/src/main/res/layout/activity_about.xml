@@ -137,9 +137,8 @@
 
     <TextView
         android:id="@+id/txtAboutText3"
-        android:layout_width="340dp"
+        android:layout_width="345dp"
         android:layout_height="87dp"
-        android:justificationMode="inter_word"
         android:text="@string/leaflet"
         android:textColor="#0C4863"
         android:textSize="18sp"
