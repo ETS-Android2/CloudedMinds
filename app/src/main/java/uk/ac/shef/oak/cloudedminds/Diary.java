@@ -68,7 +68,7 @@ public class Diary extends AppCompatActivity {
         listEntries = findViewById(R.id.listEntries);
         // A new builder is created with Gson converter factory
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.18:3000/")
+                .baseUrl("http://192.168.0.18:3000/") // In emulator: .baseUrl("http://10.0.2.2:3000/") || In personal device: .baseUrl("http://192.168.0.18:3000/") 
                 .addConverterFactory(GsonConverterFactory.create());
 
         Retrofit retrofit = builder.build();
