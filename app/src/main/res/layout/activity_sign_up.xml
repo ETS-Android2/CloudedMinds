@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editPassword2"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintVertical_bias="0.39999998" />
 
     <TextView
         android:id="@+id/txtPassword"
@@ -75,8 +75,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSignUpTTL"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSignUpInfo2"
+        app:layout_constraintVertical_bias="0.03" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/editName"
@@ -111,18 +111,18 @@
         android:layout_width="240dp"
         android:layout_height="70dp"
         android:ems="10"
-        android:hint="Enter your Password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtLoginInfo2"
+        android:id="@+id/txtSignUpInfo2"
         android:layout_width="283dp"
         android:layout_height="26dp"
         android:fontFamily="sans-serif"
@@ -133,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSignUpTTL"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtSignUpTTL"
