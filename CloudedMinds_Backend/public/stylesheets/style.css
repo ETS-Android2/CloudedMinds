@@ -38,3 +38,7 @@ p{
   text-align: center;
 }
 
+.nav-link {
+  font-size: 18px;
+  color: white;
+}
