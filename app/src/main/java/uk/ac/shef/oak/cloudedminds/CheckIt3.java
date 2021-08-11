@@ -44,7 +44,7 @@ public class CheckIt3 extends AppCompatActivity {
                 mp.start();
                 vibe.vibrate(80);
                 AlertDialog.Builder alert = new AlertDialog.Builder(CheckIt3.this);
-                alert.setTitle("Are you sure?");
+                alert.setTitle("Return to Main Menu");
                 alert.setMessage("You will return to the Main Menu which will cause all your entered data to be removed. Are you sure you wish to do this?");
                 alert.setPositiveButton("YES",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {

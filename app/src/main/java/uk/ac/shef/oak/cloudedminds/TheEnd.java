@@ -74,7 +74,7 @@ public class TheEnd extends AppCompatActivity {
                 mp.start();
                 vibe.vibrate(80);
                 AlertDialog.Builder alert = new AlertDialog.Builder(TheEnd.this);
-                alert.setTitle("Are you sure?");
+                alert.setTitle("Return to Main Menu");
                 alert.setMessage("You will return to the Main Menu which will cause all your entered data to be removed. Are you sure you wish to do this?");
                 alert.setPositiveButton("YES",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
@@ -108,10 +108,19 @@ public class TheEnd extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                dataEntry(username, event, date, mood,
-                        rating, catastrophise, generalised,
-                        ignored, critical, mind,
-                        changedMood, changedRating);
+                AlertDialog.Builder alert = new AlertDialog.Builder(TheEnd.this);
+                alert.setTitle("Submit Entries");
+                alert.setMessage("Your session entries will be saved and you will be taken back to the Main Menu. Are you sure you wish to do this?");
+                alert.setPositiveButton("YES",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dataEntry(username, event, date, mood,
+                                rating, catastrophise, generalised,
+                                ignored, critical, mind,
+                                changedMood, changedRating);
+                    }
+                });
+                alert.setNegativeButton("NO", null);
+                alert.show();
             }
         });
 
