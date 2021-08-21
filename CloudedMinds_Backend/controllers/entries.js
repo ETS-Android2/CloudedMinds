@@ -43,7 +43,7 @@ exports.insert = function (req, res) {
 exports.listData = function (req, res) {
     Entry.find({}, 'user event date mood mood_rating catastrophise generalise ignoring self_critical mind_reading changed_mood changed_rating', function (err, entries) {
         if (err) {
-            return res.send(500, err);
+            return res.status(500).send(err);
         }
         res.render('index', {
             data: entries
@@ -61,3 +61,13 @@ exports.listJsonData = function (req, res) {
     });
 }
 
+exports.delete = function (req, res) {
+    Entry.remove({_id: req.params.id}, function (err){
+        if (err){
+            res.status(500).send(err);
+        }
+        else{
+            res.redirect('/');
+        }
+    });
+}

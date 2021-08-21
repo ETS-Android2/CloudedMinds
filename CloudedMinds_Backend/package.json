@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "mocha --timeout 6000",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -15,6 +16,13 @@
     "mongoose": "^5.13.0",
     "crypto": "^1.0.1",
     "body-parser": "^1.19.0",
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "supertest": "^6.1.5"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.0.3",
+    "nyc": "^15.1.0"
   }
 }

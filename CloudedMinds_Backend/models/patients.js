@@ -3,9 +3,9 @@ let Schema = mongoose.Schema;
 
 let Patient = new Schema(
     {
-        name: {type: String},
-        username: {type: String, unique: true},
-        password: {type: String}
+        name: {type: String, required: true},
+        username: {type: String, unique: true, required: true},
+        password: {type: String, required: true}
     }
 );
 

@@ -4,6 +4,8 @@ var bodyParser = require("body-parser");
 const entry = require('../controllers/entries');
 const patient = require('../controllers/patients');
 
+var entries = require('../models/entries');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   entry.listData(req,res);
@@ -17,6 +19,16 @@ router.get('/entries', function(req, res, next) {
 router.post('/', function (req, res){
 
   entry.insert(req, res);
+})
+
+router.get('/delete/:id', function (req, res){
+
+  entry.delete(req, res);
+})
+
+router.get('/search', function (req, res){
+
+  entry.search(req, res);
 })
 
 /* GET users page. */
