@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.HashMap;
+
 import uk.ac.shef.oak.cloudedminds.Session.SessionManager;
 
 /**
@@ -37,11 +39,17 @@ public class MainActivity extends AppCompatActivity {
         // Checks whether the user is logged in, if not, it opens the login screen instead.
         sessionManager = new SessionManager(getApplicationContext());
         sessionManager.checkLogin();
+        HashMap<String, String> user = sessionManager.getUserDetails();
+        String username = user.get(SessionManager.USERNAME);
 
         // If the user is not logged in, it ends the main menu activity so the user cannot press the back button and access it.
         if(sessionManager.isLoggedIn() == false){
             finish();
         }
+
+        TextView welcome = findViewById(R.id.txtWelcomeName);
+        welcome.setText("Welcome " + username + "!");
+
 
         // Button to take the user to the mood entry session screens
         Button start = findViewById(R.id.btnStart);
@@ -145,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
                 mp.start();
                 vibe.vibrate(80);
                 sessionManager.logoutUser();
+                finish();
             }
         });
 

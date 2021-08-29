@@ -127,5 +127,19 @@
         app:layout_constraintTop_toBottomOf="@+id/btnAbout"
         app:layout_constraintVertical_bias="0.681" />
 
+    <TextView
+        android:id="@+id/txtWelcomeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="TextView"
+        android:textColor="#0C4863"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSubtitle"
+        app:layout_constraintVertical_bias="0.819" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
