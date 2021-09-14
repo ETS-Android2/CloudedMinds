@@ -1,7 +1,15 @@
 var bodyParser = require("body-parser");
 var path = require('path');
 const Entry = require('../models/entries');
-
+/**
+ * Saves the user entries from 'Catch It, Check It, Change It' session to the
+ * database. The Entries are outputted into the console if successful. This throws
+ * a Forbidden error if the user has not entered any data and also throws an
+ * Internal Server Error if the user entered data in invalid.
+ *
+ * @param req The HTTP request object
+ * @param res The HTTP response object
+ */
 exports.insert = function (req, res) {
     let userData = req.body;
 
@@ -40,6 +48,14 @@ exports.insert = function (req, res) {
     }
 }
 
+/**
+ * Displays the user entries that are saved in the database in the index page of the
+ * CloudedMinds website. Throws an Internal Server Error if there are issues retrieving
+ * data.
+ *
+ * @param req The HTTP request object
+ * @param res The HTTP response object
+ */
 exports.listData = function (req, res) {
     Entry.find({}, 'user event date mood mood_rating catastrophise generalise ignoring self_critical mind_reading changed_mood changed_rating', function (err, entries) {
         if (err) {
@@ -50,7 +66,14 @@ exports.listData = function (req, res) {
         });
     });
 }
-
+/**
+ * Displays the user entries saved in the database as JSON values. This helps in
+ * displaying the user entries in the 'Diary' screen of the CloudedMinds app. It
+ * throws an Internal Server Error if there are any issues retrieving data.
+ *
+ * @param req The HTTP request object
+ * @param res The HTTP response object
+ */
 exports.listJsonData = function (req, res) {
     Entry.find({}, 'user event date mood mood_rating catastrophise generalise ignoring self_critical mind_reading changed_mood changed_rating', function (err, values) {
         if (err) {
@@ -61,6 +84,13 @@ exports.listJsonData = function (req, res) {
     });
 }
 
+/**
+ * Deletes a specific entry from the database when the medical professional chooses.
+ * Throws an Internal Server Error if there are any issues retrieving data.
+ *
+ * @param req The HTTP request object
+ * @param res The HTTP response object
+ */
 exports.delete = function (req, res) {
     Entry.remove({_id: req.params.id}, function (err){
         if (err){
