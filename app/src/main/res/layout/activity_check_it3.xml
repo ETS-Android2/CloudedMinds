@@ -34,7 +34,7 @@
                 android:gravity="bottom|center_horizontal"
                 android:text="Check It"
                 android:textColor="@color/black"
-                android:textSize="22sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.85"
@@ -62,7 +62,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="290dp"
+        android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,9 +76,9 @@
             android:id="@+id/txtCatchIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/catchit"
+            android:text="Catch It"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.169"
@@ -102,9 +102,9 @@
             android:id="@+id/txtCheckIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Check It"
+            android:text="@string/checkit"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.169"
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:text="@string/changeit"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.169"
@@ -143,17 +143,17 @@
     <TextView
         android:id="@+id/txtCheck8"
         android:layout_width="340dp"
-        android:layout_height="45dp"
+        android:layout_height="55dp"
         android:text="In this event, have you ignored the positive?"
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <TextView
         android:id="@+id/txtIgnoringThePositive"
@@ -165,20 +165,20 @@
         android:textColor="#0A80B6"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCheck6"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.029" />
 
     <TextView
         android:id="@+id/txtCheck7"
         android:layout_width="340dp"
-        android:layout_height="70dp"
+        android:layout_height="110dp"
         android:justificationMode="inter_word"
         android:text="Sometimes we tend to focus our thinking on negative or bad events and ignore the positive or good events."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -188,10 +188,10 @@
     <TextView
         android:id="@+id/textView14"
         android:layout_width="340dp"
-        android:layout_height="90dp"
+        android:layout_height="135dp"
         android:text="For example, you may have many good friends who you have known for years but you concentrate and worry about one that has fallen out with you."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -202,12 +202,10 @@
     <TextView
         android:id="@+id/txtCheck6"
         android:layout_width="340dp"
-        android:layout_height="30dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:justificationMode="inter_word"
+        android:layout_height="60dp"
         android:text="Take a moment to consider your worries."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -221,7 +219,7 @@
         android:layout_height="70dp"
         android:text="NEXT"
         android:textColor="@drawable/button_color"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:backgroundTint="#C2E1E4"
         app:icon="@drawable/ic_start"
         app:iconTint="@drawable/button_color"
@@ -229,7 +227,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rdgIgnorePositive"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintVertical_bias="0.216" />
 
     <TextView
         android:id="@+id/txtCheckThoseWorries"
@@ -266,7 +264,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Yes"
-            android:textSize="16sp" />
+            android:textSize="22sp" />
 
         <RadioButton
             android:id="@+id/btnNoIgnore"
@@ -275,7 +273,7 @@
             android:layout_weight="1"
             android:checked="true"
             android:text="No"
-            android:textSize="16sp" />
+            android:textSize="22sp" />
 
     </RadioGroup>
 

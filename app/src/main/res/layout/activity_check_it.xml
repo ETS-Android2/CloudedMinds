@@ -8,12 +8,11 @@
 
     <TextView
         android:id="@+id/lblCatastrophising"
-        android:layout_width="340dp"
-        android:layout_height="25dp"
-        android:justificationMode="inter_word"
+        android:layout_width="250dp"
+        android:layout_height="65dp"
         android:text="In this event, have you catastrophised?"
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,20 +30,20 @@
         android:textColor="#0A80B6"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCheck1"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
         android:id="@+id/txtCheck2"
         android:layout_width="340dp"
-        android:layout_height="90dp"
+        android:layout_height="110dp"
         android:justificationMode="inter_word"
         android:text="Sometimes, we think things are much worse than they really are by jumping to the worst conclusion. This is called Catastrophising."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,11 +53,10 @@
     <TextView
         android:id="@+id/txtCheck3"
         android:layout_width="340dp"
-        android:layout_height="66dp"
-        android:justificationMode="inter_word"
+        android:layout_height="108dp"
         android:text="For example, after experiencing consitent headaches over a week, you believe you are suffering from a brain tumour."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -69,12 +67,10 @@
     <TextView
         android:id="@+id/txtCheck1"
         android:layout_width="340dp"
-        android:layout_height="30dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:justificationMode="inter_word"
+        android:layout_height="60dp"
         android:text="Take a moment to consider your worries."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -96,7 +92,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rdgCatastrophising"
-        app:layout_constraintVertical_bias="0.49" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <TextView
         android:id="@+id/txtCheckThoseWorries"
@@ -142,7 +138,7 @@
                 android:gravity="bottom|center_horizontal"
                 android:text="Check It"
                 android:textColor="@color/black"
-                android:textSize="22sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.85"
@@ -170,7 +166,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="290dp"
+        android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -182,11 +178,11 @@
 
         <TextView
             android:id="@+id/txtCatchIt"
-            android:layout_width="wrap_content"
+            android:layout_width="59dp"
             android:layout_height="wrap_content"
-            android:text="@string/catchit"
+            android:text="Catch It"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.169"
@@ -210,9 +206,9 @@
             android:id="@+id/txtCheckIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Check It"
+            android:text="@string/checkit"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.169"
@@ -238,7 +234,7 @@
             android:layout_height="wrap_content"
             android:text="@string/changeit"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.169"
@@ -267,7 +263,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Yes"
-            android:textSize="16sp" />
+            android:textSize="22sp" />
 
         <RadioButton
             android:id="@+id/btnNoCat"
@@ -276,7 +272,7 @@
             android:layout_weight="1"
             android:checked="true"
             android:text="No"
-            android:textSize="16sp" />
+            android:textSize="22sp" />
 
     </RadioGroup>
 

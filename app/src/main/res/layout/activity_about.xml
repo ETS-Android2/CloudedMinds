@@ -7,64 +7,90 @@
     tools:context=".About">
 
     <TextView
-        android:id="@+id/txtAboutText"
-        android:layout_width="345dp"
-        android:layout_height="80dp"
-        android:text="Disclaimer: This app should not be used as an alternative to proper medical treatment. If your mental health is impacting your daily life, please contact your doctor."
-        android:textColor="#0C4863"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAboutText3"
-        app:layout_constraintVertical_bias="0.083" />
-
-    <TextView
         android:id="@+id/txtAboutText1"
         android:layout_width="340dp"
-        android:layout_height="67dp"
+        android:layout_height="110dp"
         android:justificationMode="inter_word"
         android:text="This is a self help application developed for those suffering from mild to moderate depression and/or anxiety."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAbout"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
-        android:id="@+id/txtAboutText5"
+        android:id="@+id/txtAboutText2"
         android:layout_width="340dp"
-        android:layout_height="47dp"
-        android:justificationMode="inter_word"
-        android:text="MSc(Eng) Advanced Software Engineering student at the University of Sheffield."
+        android:layout_height="135dp"
+        android:text='The contents of this application is based on the "Depression and Low Mood" Self Help leaflet provided by NHS Cumbria, Northumberland, Tyne and Wear.'
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAboutText4"
+        app:layout_constraintTop_toBottomOf="@+id/txtAboutText1"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtAboutText3"
+        android:layout_width="345dp"
+        android:layout_height="85dp"
+        android:text="@string/leaflet"
+        android:textColor="#0C4863"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAboutText2"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/txtAboutText"
+        android:layout_width="345dp"
+        android:layout_height="120dp"
+        android:text="Disclaimer: This app should not be used as an alternative to proper medical treatment. If your mental health is impacting your daily life, please contact your doctor."
+        android:textColor="#0C4863"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAboutText3"
+        app:layout_constraintVertical_bias="0.047" />
 
     <TextView
         android:id="@+id/txtAboutText4"
         android:layout_width="340dp"
-        android:layout_height="27dp"
-        android:gravity="center_horizontal|center_vertical"
+        android:layout_height="30dp"
+        android:gravity="center"
         android:text="Developed by Sukanya Chatterjee."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAboutText"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintVertical_bias="0.133" />
+
+    <TextView
+        android:id="@+id/txtAboutText5"
+        android:layout_width="340dp"
+        android:layout_height="80dp"
+        android:text="MSc(Eng) Advanced Software Engineering student at the University of Sheffield."
+        android:textColor="#0C4863"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAboutText4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -94,7 +120,7 @@
                 android:gravity="bottom|center_horizontal"
                 android:text="About"
                 android:textColor="@color/black"
-                android:textSize="22sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.85"
@@ -135,33 +161,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
         app:layout_constraintVertical_bias="0.048" />
-
-    <TextView
-        android:id="@+id/txtAboutText2"
-        android:layout_width="340dp"
-        android:layout_height="87dp"
-        android:text='The contents of this application is based on the "Depression and Low Mood" Self Help leaflet provided by NHS Cumbria, Northumberland, Tyne and Wear.'
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAboutText1"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
-        android:id="@+id/txtAboutText3"
-        android:layout_width="345dp"
-        android:layout_height="50dp"
-        android:text="@string/leaflet"
-        android:textColor="#0C4863"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAboutText2"
-        app:layout_constraintVertical_bias="0.023" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

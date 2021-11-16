@@ -4,113 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CheckIt5">
+    tools:context=".CatchIt2">
 
     <TextView
-        android:id="@+id/lblMindRead"
-        android:layout_width="250dp"
-        android:layout_height="65dp"
-        android:text='In this event, have you "mind read"?'
-        android:textColor="#0C4863"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCheck13"
-        app:layout_constraintVertical_bias="0.054" />
-
-    <TextView
-        android:id="@+id/txtMindReading"
-        android:layout_width="340dp"
-        android:layout_height="46dp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="Mind Reading"
-        android:textColor="#0A80B6"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCheck11"
-        app:layout_constraintVertical_bias="0.013" />
-
-    <TextView
-        android:id="@+id/txtCheck12"
-        android:layout_width="340dp"
-        android:layout_height="110dp"
-        android:justificationMode="inter_word"
-        android:text="We sometimes believe we know what others are thinking and if our mood is low, we may expect that they are thinking badly of us."
-        android:textColor="#0C4863"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMindReading"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/txtCheck13"
-        android:layout_width="340dp"
-        android:layout_height="135dp"
-        android:justificationMode="inter_word"
-        android:text='For example, if a friend is quiet you may think "that is because she thinks I am boring". Or we may predict a negative outcome before it happens.'
+        android:id="@+id/txtCatch"
+        android:layout_width="317dp"
+        android:layout_height="80dp"
+        android:text="Think about how you felt during this event and in the time afterwards."
         android:textColor="#0C4863"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCheck12"
-        app:layout_constraintVertical_bias="0.028" />
-
-    <TextView
-        android:id="@+id/txtCheck11"
-        android:layout_width="340dp"
-        android:layout_height="55dp"
-        android:text="Take a moment to consider your worries."
-        android:textColor="#0C4863"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCheckThoseWorries"
-        app:layout_constraintVertical_bias="0.00999999" />
-
-    <Button
-        android:id="@+id/btnToChangeIt"
-        android:layout_width="275dp"
-        android:layout_height="70dp"
-        android:text="NEXT"
-        android:textColor="@drawable/button_color"
-        android:textSize="22sp"
-        app:backgroundTint="#C2E1E4"
-        app:icon="@drawable/ic_start"
-        app:iconTint="@drawable/button_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdgMindReading"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <TextView
-        android:id="@+id/txtCheckThoseWorries"
-        android:layout_width="284dp"
-        android:layout_height="35dp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="Check Those Worries"
-        android:textColor="#0A80B6"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCatchThoseWorries"
+        app:layout_constraintVertical_bias="0.039" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -131,14 +39,14 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtHeading2"
                 android:layout_width="200dp"
                 android:layout_height="43dp"
                 android:layout_marginEnd="88dp"
                 android:layout_marginRight="88dp"
                 android:fontFamily="@font/baloo"
                 android:gravity="bottom|center_horizontal"
-                android:text="Check It"
+                android:text="Catch It"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -245,36 +153,156 @@
             app:layout_constraintVertical_bias="0.015" />
     </LinearLayout>
 
+
+    <TextView
+        android:id="@+id/txtCatchThoseWorries"
+        android:layout_width="400dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Catch Those Worries"
+        android:textColor="#0A80B6"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
     <RadioGroup
-        android:id="@+id/rdgMindReading"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:id="@+id/rdGroupMood"
+        android:layout_width="60dp"
+        android:layout_height="220dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblMindRead"
-        app:layout_constraintVertical_bias="0.060000002">
-
-
-        <RadioButton
-            android:id="@+id/btnYesMind"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Yes"
-            android:textSize="22sp" />
+        app:layout_constraintTop_toBottomOf="@+id/lblMood2"
+        app:layout_constraintVertical_bias="0.047">
 
         <RadioButton
-            android:id="@+id/btnNoMind"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
             android:checked="true"
-            android:text="No"
-            android:textSize="22sp" />
+            android:text="1"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblMood2"
+            app:layout_constraintVertical_bias="0.0" />
 
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="2"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="3"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="4"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioButton
+            android:id="@+id/rb5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="5"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb2"
+            app:layout_constraintVertical_bias="0.331" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblMood2"
+        android:layout_width="317dp"
+        android:layout_height="55dp"
+        android:text="Rate the strength of those negative thoughts:"
+        android:textColor="#0C4863"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCatch"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Button
+        android:id="@+id/btnToCheckIt"
+        android:layout_width="275dp"
+        android:layout_height="70dp"
+        android:text="NEXT"
+        android:textColor="@drawable/button_color"
+        android:textSize="22sp"
+        app:backgroundTint="#C2E1E4"
+        app:icon="@drawable/ic_start"
+        app:iconTint="@drawable/button_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdGroupMood"
+        app:layout_constraintVertical_bias="0.221" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Low)"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
+        app:layout_constraintTop_toTopOf="@+id/rdGroupMood"
+        app:layout_constraintVertical_bias="0.029999971" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(High)"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnToCheckIt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rdGroupMood"
+        app:layout_constraintTop_toTopOf="@+id/rdGroupMood"
+        app:layout_constraintVertical_bias="0.78" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

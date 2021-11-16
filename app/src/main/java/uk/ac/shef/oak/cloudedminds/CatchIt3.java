@@ -26,7 +26,7 @@ import android.widget.TextView;
  * so that it can be retrieved in the end screen for saving.
  */
 
-public class CatchIt2 extends AppCompatActivity {
+public class CatchIt3 extends AppCompatActivity {
 
     private MediaPlayer mp;
 
@@ -34,9 +34,9 @@ public class CatchIt2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_catch_it2);
-        final Vibrator vibe = (Vibrator) CatchIt2.this.getSystemService(Context.VIBRATOR_SERVICE);
-        EditText mood = findViewById(R.id.txtMood);
+        setContentView(R.layout.activity_catch_it3);
+        final Vibrator vibe = (Vibrator) CatchIt3.this.getSystemService(Context.VIBRATOR_SERVICE);
+        RadioGroup moodrating = findViewById(R.id.rdGroupMood);
 
         ImageView home = findViewById(R.id.btnHome);
         home.setOnClickListener(new View.OnClickListener() {
@@ -45,12 +45,12 @@ public class CatchIt2 extends AppCompatActivity {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
-                AlertDialog.Builder alert = new AlertDialog.Builder(CatchIt2.this);
+                AlertDialog.Builder alert = new AlertDialog.Builder(CatchIt3.this);
                 alert.setTitle("Return to Main Menu");
                 alert.setMessage("You will return to the Main Menu which will cause all your entered data to be removed. Are you sure you wish to do this?");
                 alert.setPositiveButton("YES",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(CatchIt2.this, MainActivity.class));
+                        startActivity(new Intent(CatchIt3.this, MainActivity.class));
                     }
                 });
                 alert.setNegativeButton("NO", null);
@@ -58,35 +58,37 @@ public class CatchIt2 extends AppCompatActivity {
             }
         });
 
-        Button catchit3 = findViewById(R.id.btnToCatchIt3);
-        catchit3.setOnClickListener(new View.OnClickListener() {
+        Button checkit = findViewById(R.id.btnToCheckIt);
+        checkit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.buttontap);
                 mp.start();
                 vibe.vibrate(80);
 
-                String txtMood = mood.getText().toString();
+                int selectedId = moodrating.getCheckedRadioButtonId();
+                RadioButton moodRate = findViewById(selectedId);
+                String txtRating = moodRate.getText().toString();
                 // Checks if fields are empty and allows user to move ahead when they've entered the details.
-                if(txtMood.isEmpty()){
-                    AlertDialog.Builder alert = new AlertDialog.Builder(CatchIt2.this);
-                    alert.setTitle("Empty Mood");
-                    alert.setMessage("Please enter the mood you experienced.");
+                if(txtRating.isEmpty()){
+                    AlertDialog.Builder alert = new AlertDialog.Builder(CatchIt3.this);
+                    alert.setTitle("Empty Rating");
+                    alert.setMessage("Please rate the strength of your mood.");
                     alert.setPositiveButton("OK",null);
                     alert.show();
                 }
                 else {
                     SharedPreferences sharedPref = getSharedPreferences("ENTRIES", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putString("mood", mood.getText().toString());
+                    editor.putString("rating", txtRating);
                     editor.apply();
 
-                    startActivity(new Intent(getApplicationContext(), CatchIt3.class));
+                    startActivity(new Intent(getApplicationContext(), CheckIt.class));
                 }
             }
         });
 
-        catchit3.setOnTouchListener(new View.OnTouchListener(){
+        checkit.setOnTouchListener(new View.OnTouchListener(){
             @SuppressLint("ClickableViewAccessibility")
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -94,12 +96,12 @@ public class CatchIt2 extends AppCompatActivity {
                 switch (event.getAction()) {
                     // When the user clicks the Button
                     case MotionEvent.ACTION_DOWN:
-                        catchit3.setTypeface(Typeface.DEFAULT_BOLD);
+                        checkit.setTypeface(Typeface.DEFAULT_BOLD);
                         break;
 
                     // When the user releases the Button
                     case MotionEvent.ACTION_UP:
-                        catchit3.setTypeface(Typeface.DEFAULT);
+                        checkit.setTypeface(Typeface.DEFAULT);
                         break;
                 }
                 return false;

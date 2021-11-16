@@ -12,7 +12,7 @@
         android:layout_height="70dp"
         android:text="NEXT"
         android:textColor="@drawable/button_color"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:backgroundTint="#C2E1E4"
         app:icon="@drawable/ic_start"
         app:iconTint="@drawable/button_color"
@@ -25,41 +25,41 @@
     <TextView
         android:id="@+id/textView21"
         android:layout_width="340dp"
-        android:layout_height="87dp"
+        android:layout_height="110dp"
         android:justificationMode="inter_word"
         android:text="This means they go over an upsetting thought again and again without finding a solution. It can become an unhelpful habit."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20"
-        app:layout_constraintVertical_bias="0.018" />
+        app:layout_constraintVertical_bias="0.019" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="340dp"
-        android:layout_height="70dp"
+        android:layout_height="110dp"
         android:justificationMode="inter_word"
         android:text="For example, if the rumination is bad when sitting and watching TV, try and go out for a walk or do a puzzle."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <TextView
         android:id="@+id/textView24"
         android:layout_width="340dp"
-        android:layout_height="70dp"
+        android:layout_height="83dp"
         android:justificationMode="inter_word"
         android:text="Interrupting this habit may help reduce the time spent thinking these upsetting thoughts."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -70,31 +70,31 @@
     <TextView
         android:id="@+id/textView22"
         android:layout_width="340dp"
-        android:layout_height="70dp"
+        android:layout_height="110dp"
         android:justificationMode="inter_word"
         android:text="A way of dealing with this is to try and notice when this type of thinking starts and doing something different."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.24000001" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="340dp"
-        android:layout_height="46dp"
+        android:layout_height="55dp"
         android:text="When people are anxious or depressed, they may ruminate."
         android:textColor="#0C4863"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTitle7"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
         android:id="@+id/lblTitle7"
@@ -140,7 +140,7 @@
                 android:gravity="bottom|center_horizontal"
                 android:text="Ruminations"
                 android:textColor="@color/black"
-                android:textSize="22sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.85"

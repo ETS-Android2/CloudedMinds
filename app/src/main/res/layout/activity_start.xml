@@ -14,13 +14,13 @@
         android:fontFamily="@font/baloo"
         android:text="Sound from Zapsplat.com"
         android:textColor="#0C4863"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStartApp"
-        app:layout_constraintVertical_bias="0.681" />
+        app:layout_constraintVertical_bias="0.658" />
 
     <Button
         android:id="@+id/btnStartApp"
@@ -30,7 +30,7 @@
         android:drawableLeft="@drawable/ic_start"
         android:text="START"
         android:textColor="@drawable/main_button_color"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:backgroundTint="#EDF0F1"
         app:icon="@drawable/ic_start"
         app:iconPadding="0dp"
@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgCloud"
-        app:layout_constraintVertical_bias="0.366" />
+        app:layout_constraintVertical_bias="0.275" />
 
     <TextView
         android:id="@+id/lblTitle"
@@ -63,7 +63,7 @@
         android:fontFamily="@font/baloo"
         android:text="Worries Pass By Like Clouds"
         android:textColor="#0C4863"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblSubtitle"
-        app:layout_constraintVertical_bias="0.026"
+        app:layout_constraintVertical_bias="0.076"
         app:srcCompat="@drawable/clouds" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

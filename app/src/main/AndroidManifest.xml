@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CloudedMinds"
         android:usesCleartextTraffic="true">
+        <activity android:name=".CatchIt3"></activity>
         <activity android:name=".Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUp" />
-        <activity android:name=".Login"/>
+        <activity android:name=".Login" />
         <activity android:name=".Diary" />
         <activity android:name=".About" />
         <activity android:name=".TheEnd" />
