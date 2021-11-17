@@ -57,6 +57,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"/>
 
+            <Button
+                android:id="@+id/btnCatchSpk1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_speak"
+                app:backgroundTint="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/txtHeading2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toEndOf="@+id/txtHeading2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.333" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
 
@@ -199,7 +212,7 @@
 
     <TextView
         android:id="@+id/txtCatchThoseWorries"
-        android:layout_width="400dp"
+        android:layout_width="340dp"
         android:layout_height="35dp"
         android:fontFamily="@font/baloo"
         android:gravity="center|center_horizontal|center_vertical"
@@ -223,10 +236,10 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblEvent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.00999999" />
 
     <TextView
         android:id="@+id/txtDate"
@@ -241,8 +254,20 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblDate"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.031" />
+
+    <TextView
+        android:id="@+id/txtCatchSpeech1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catch it. Catch Those Worries. The way we perceive certain situations can affect our feelings and mood. What is the event that made you feel strong negative emotions? Enter the event in the text entry field. What was the date of this event? Tap the box to select the date."
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNextCatchIt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,14 +24,21 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * This class allows the user to enter the event and date which are stored with Shared Preferences
  * so that it can be retrieved in the end screen for saving.
  */
 public class CatchIt extends AppCompatActivity {
+
+    TextView catchSpeak;
+    Button catchSpk;
+
+    TextToSpeech mTTS;
 
     private MediaPlayer mp;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
@@ -40,7 +48,37 @@ public class CatchIt extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catch_it);
+        catchSpeak = findViewById(R.id.txtCatchSpeech1);
+        catchSpk = findViewById(R.id.btnCatchSpk1);
         final Vibrator vibe = (Vibrator) CatchIt.this.getSystemService(Context.VIBRATOR_SERVICE);
+
+        mTTS = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status == TextToSpeech.SUCCESS){
+                    int lang = mTTS.setLanguage(Locale.UK);
+
+                    if(lang == TextToSpeech.LANG_MISSING_DATA || lang == TextToSpeech.LANG_NOT_SUPPORTED){
+                        Toast.makeText(CatchIt.this, "Language not supported", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+
+        catchSpk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                String toSpeak = catchSpeak.getText().toString();
+                if(toSpeak.equals("")){
+                    Toast.makeText(CatchIt.this, "No Text", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    //Speak the text
+                    mTTS.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            }
+        });
+
         EditText event = findViewById(R.id.txtEvent);
         TextView dateText = findViewById(R.id.txtDate);
 
@@ -157,4 +195,13 @@ public class CatchIt extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if(mTTS != null){
+            mTTS.stop();
+            mTTS.shutdown();
+        }
+    };
 }
